@@ -5,7 +5,6 @@
         <el-button class="bwkd" type="primary" @click="dialogFormVisible = true">帮我开店</el-button>
     </div>
     <el-dialog title="申请入驻" :visible.sync="dialogFormVisible" size="tiny">
-      <el-form :model="form">
         <el-form :model="ruleForm2" :rules="rules2" ref="ruleForm2" label-position="left" label-width="0px" class="demo-ruleForm login-container">
           <el-form-item prop="account">
             <el-input type="text" v-model="ruleForm2.account" auto-complete="off" placeholder="请输入手机号">
@@ -24,7 +23,6 @@
           </el-form-item>
           <el-checkbox v-model="checked" checked class="remember">我已阅读并已同意 《网上订餐平台服务协议》</el-checkbox>
         </el-form>
-      </el-form>
     </el-dialog>
   </div>
 </template>
@@ -38,6 +36,7 @@
         dialogFormVisible: false,
         formLabelWidth: '120px',
         logining: false,
+        recordlist: '',
         ruleForm2: {
           account: 'admin',
           checkPass: '123456'
@@ -78,8 +77,15 @@
                   type: 'error'
                 });
               } else {
+                var tz = sessionStorage.getItem('recordlist');
                 sessionStorage.setItem('user', JSON.stringify(user));
-                this.$router.push({ path: '/table' });
+                if (tz) {
+                  let recordlistnum ='1';
+                  sessionStorage.setItem('recordlist', JSON.stringify(recordlistnum));
+                  this.$router.push({ path: '/table' });
+                } else {
+                  this.$router.push({ path: '/recordlist' });
+                }
               }
             });
           } else {
