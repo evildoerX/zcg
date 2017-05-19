@@ -8,7 +8,9 @@
       <el-form :model="form">
         <el-form :model="ruleForm2" :rules="rules2" ref="ruleForm2" label-position="left" label-width="0px" class="demo-ruleForm login-container">
           <el-form-item prop="account">
-            <el-input type="text" v-model="ruleForm2.account" auto-complete="off" placeholder="账号"></el-input>
+            <el-input type="text" v-model="ruleForm2.account" auto-complete="off" placeholder="请输入手机号">
+              <el-button slot="append" >发送验证码</el-button>
+            </el-input>
           </el-form-item>
           <el-form-item prop="checkPass">
             <el-input type="password" v-model="ruleForm2.checkPass" auto-complete="off" placeholder="密码"></el-input>
@@ -52,7 +54,7 @@
         },
         rules2: {
           account: [
-            { required: true, message: '请输入账号', trigger: 'blur' },
+            { required: true, message: '请输入手机号', trigger: 'blur' },
             //{ validator: validaePass }
           ],
           checkPass: [
