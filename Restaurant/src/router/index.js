@@ -1,5 +1,6 @@
 import Login from '../components/Login.vue'
 import Index from '../components/Index.vue'
+import Record_list from '../components/Record_list.vue'
 import NotFound from '../components/404.vue'
 import AppMain from '../components/layout/AppMain.vue'
 import Home from '../view/Home.vue'
@@ -21,6 +22,12 @@ let routes = [
     {
         path: '/index',
         component: Index,
+        name: '',
+        hidden: true
+    },
+    {
+        path: '/recordlist',
+        component: Record_list,
         name: '',
         hidden: true
     },
