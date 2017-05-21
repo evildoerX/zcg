@@ -10,8 +10,6 @@
             <span class="el-dropdown-link userinfo-inner">18651908626
             </span>
             <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>我的消息</el-dropdown-item>
-              <el-dropdown-item>设置</el-dropdown-item>
               <el-dropdown-item divided @click.native="logout">退出登录</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
@@ -28,10 +26,18 @@
       <el-card class="box-card">
         <el-button class="sqkd" type="primary">申请开店</el-button>
         <el-tabs v-model="activeName" @tab-click="handleClick">
-          <el-tab-pane label="已通过" name="first">用户管理</el-tab-pane>
-          <el-tab-pane label="待完善" name="second">配置管理</el-tab-pane>
-          <el-tab-pane label="审核中" name="third">角色管理</el-tab-pane>
-          <el-tab-pane label="需修改" name="fourth">定时任务补偿</el-tab-pane>
+          <el-tab-pane label="已通过" name="first">
+            <recordpass />
+          </el-tab-pane>
+          <el-tab-pane label="待完善" name="second">
+            <recordcomplete />
+          </el-tab-pane>
+          <el-tab-pane label="审核中" name="third">
+            <recordcheck />
+          </el-tab-pane>
+          <el-tab-pane label="需修改" name="fourth">
+            <recordmodify />
+          </el-tab-pane>
         </el-tabs>
       </el-card>
       <div style="height:80px;">
@@ -41,7 +47,17 @@
 </template>
 
 <script>
+import recordpass from './component/record/record-pass'
+import recordcomplete from './component/record/record-complete'
+import recordcheck from './component/record/record-check'
+import recordmodify from './component/record/record-modify'
   export default {
+    components: {
+      recordpass,
+      recordcomplete,
+      recordcheck,
+      recordmodify
+    },
     data() {
       return {
         activeName: 'second',
