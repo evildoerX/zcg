@@ -215,6 +215,12 @@
       line-height: 31px;
     }
   }
+  .card:hover {
+    box-shadow: 0 0 3px #0091ea;
+  }
+  .card:active {
+    box-shadow: 0 0 3px #0091ea;
+  }
 }
   
 </style>

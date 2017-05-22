@@ -37,7 +37,7 @@
       </el-card>
       <div class="btn-box" >
         <el-button class="btn-pre" @click="pre">上一步</el-button>
-        <el-button class="btn-next" type="primary" @click="next">提交并进入下一步</el-button>
+        <el-button class="btn-next" type="primary" @click="next">{{btn_name}}</el-button>
       </div>
     </div>
   </div>
@@ -74,6 +74,7 @@ const componentsArr = [
     },
     data() {
       return {
+        btn_name:'提交并进入下一步',
         type: componentsArr[0],
       	active: 0,
         activeName: 'second',
@@ -90,6 +91,9 @@ const componentsArr = [
         this.type = componentsArr[this.active]
       },
       next() {
+        if (this.active === 5) {
+          this.btn_name="提交并申请开店"
+        }
         if (++this.active >= 7) {
           this.$router.push('/recordlist');
           return

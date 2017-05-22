@@ -36,7 +36,6 @@
     },
     data() {
       return {
-        type: componentsArr[0],
       	active: 0,
         activeName: 'second',
         sysUserName: '',
