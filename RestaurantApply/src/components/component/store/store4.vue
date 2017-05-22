@@ -26,7 +26,6 @@
           <div class="ps_info">
             <div class="title">
               <div class="color">
-                
               </div>
               <div class="name">
                 配送范围1

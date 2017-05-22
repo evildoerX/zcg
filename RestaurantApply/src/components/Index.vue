@@ -77,11 +77,11 @@
                   type: 'error'
                 });
               } else {
-                var tz = sessionStorage.getItem('recordlist');
+                var tz = localStorage.getItem('recordlist');
                 sessionStorage.setItem('user', JSON.stringify(user));
                 if (tz) {
                   let recordlistnum ='1';
-                  sessionStorage.setItem('recordlist', JSON.stringify(recordlistnum));
+                  localStorage.setItem('recordlist', JSON.stringify(recordlistnum));
                   this.$router.push({ path: '/table' });
                 } else {
                   this.$router.push({ path: '/recordlist' });

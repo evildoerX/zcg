@@ -5,7 +5,7 @@
     style="width: 100%">
     <el-table-column
       label="门店名称"
-      width="180">
+      width="150">
       <template scope="scope">
         <span style="margin-left: 10px">{{ scope.row.m_name }}</span>
       </template>
@@ -70,30 +70,6 @@
     data() {
       return {
         tableData: [{
-          m_name: '茶壶店',
-          id: '10468',
-          name: '程浩',
-          phone: '18651908626',
-          stat: '已通过',
-          date: '2017-05-19 10:58:42',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          m_name: '茶壶店',
-          id: '10468',
-          name: '程浩',
-          phone: '18651908626',
-          stat: '已通过',
-          date: '2017-05-19 10:58:42',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          m_name: '茶壶店',
-          id: '10468',
-          name: '程浩',
-          phone: '18651908626',
-          stat: '已通过',
-          date: '2017-05-19 10:58:42',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
           m_name: '茶壶店',
           id: '10468',
           name: '程浩',
