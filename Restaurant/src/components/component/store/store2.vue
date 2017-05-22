@@ -117,7 +117,7 @@
             return time.getTime() < Date.now() - 8.64e7;
           }
         },
-        value1: '',
+        checked: false,
         ruleForm1:{
           region1: '',
           name1: '',
@@ -178,6 +178,9 @@
           pic2: [
             { required: true, message: '请上传正价照片', trigger: 'blur' }
           ]
+        },
+        rules3: {
+          
         }
       };
     },
