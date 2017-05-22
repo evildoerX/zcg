@@ -2,13 +2,15 @@ import Login from '../components/Login.vue'
 import NotFound from '../components/404.vue'
 import AppMain from '../components/layout/AppMain.vue'
 import Home from '../view/Home.vue'
-import Table from '../view/nav1/Table.vue'
-import Form from '../view/nav1/Form.vue'
-import user from '../view/nav1/user.vue'
-import Page4 from '../view/nav2/Page4.vue'
-import Page5 from '../view/nav2/Page5.vue'
-import Page6 from '../view/nav3/Page6.vue'
-import echarts from '../view/charts/echarts.vue'
+import Data from '../view/data/Data.vue'
+import Finance from '../view/finance/Finance.vue'
+import Help from '../view/help/Help.vue'
+import Item from '../view/help/Help.vue'
+import Order from '../view/order/Order.vue'
+import Sell from '../view/sell/Sell.vue'
+import Spread from '../view/spread/Spread.vue'
+import Store from '../view/store/Store.vue'
+import User from '../view/user/User.vue'
 
 let routes = [
     {
@@ -40,7 +42,7 @@ let routes = [
         iconCls: 'fa fa-address-card',
         leaf: true,//只有一个节点
         children: [
-            { path: '/home', component: Home, name: '订单', hidden: false }
+            { path: '/order', component: Order, name: '订单', hidden: false }
         ]
     },
     {
@@ -50,7 +52,7 @@ let routes = [
         iconCls: 'fa fa-address-card',
         leaf: true,//只有一个节点
         children: [
-            { path: '/home', component: Home, name: '商品', hidden: false }
+            { path: '/item', component: Item, name: '商品', hidden: false }
         ]
     },
     {
@@ -60,7 +62,7 @@ let routes = [
         iconCls: 'fa fa-address-card',
         leaf: true,//只有一个节点
         children: [
-            { path: '/home', component: Home, name: '顾客', hidden: false }
+            { path: '/user', component: User, name: '顾客', hidden: false }
         ]
     },
     {
@@ -70,7 +72,7 @@ let routes = [
         iconCls: 'fa fa-address-card',
         leaf: true,//只有一个节点
         children: [
-            { path: '/home', component: Home, name: '财务', hidden: false }
+            { path: '/finance', component: Finance, name: '财务', hidden: false }
         ]
     },
     {
@@ -80,7 +82,7 @@ let routes = [
         iconCls: 'fa fa-address-card',
         leaf: true,//只有一个节点
         children: [
-            { path: '/home', component: Home, name: '门店', hidden: false }
+            { path: '/store', component: Store, name: '门店', hidden: false }
         ]
     },
     {
@@ -90,7 +92,7 @@ let routes = [
         iconCls: 'fa fa-address-card',
         leaf: true,//只有一个节点
         children: [
-            { path: '/echarts', component: echarts, name: '数据' }
+            { path: '/data', component: Data, name: '数据' }
         ]
     },
     {
@@ -100,7 +102,7 @@ let routes = [
         iconCls: 'fa fa-address-card',
         leaf: true,//只有一个节点
         children: [
-            { path: '/home', component: Home, name: '营销', hidden: false }
+            { path: '/sell', component: Sell, name: '营销', hidden: false }
         ]
     },
     {
@@ -110,7 +112,7 @@ let routes = [
         iconCls: 'fa fa-address-card',
         leaf: true,//只有一个节点
         children: [
-            { path: '/home', component: Home, name: '店铺推广', hidden: false }
+            { path: '/spread', component: Spread, name: '店铺推广', hidden: false }
         ]
     },
     {
@@ -120,37 +122,7 @@ let routes = [
         iconCls: 'fa fa-address-card',
         leaf: true,//只有一个节点
         children: [
-            { path: '/home', component: Home, name: '帮助', hidden: false }
-        ]
-    },
-    
-    {
-        path: '/',
-        component: AppMain,
-        name: '导航二',
-        iconCls: 'fa fa-id-card-o',
-        children: [
-            { path: '/page4', component: Page4, name: '页面4' },
-            { path: '/page5', component: Page5, name: '页面5' }
-        ]
-    },
-    {
-        path: '/',
-        component: AppMain,
-        name: '',
-        iconCls: 'fa fa-address-card',
-        leaf: true,//只有一个节点
-        children: [
-            { path: '/page6', component: Page6, name: '导航三' }
-        ]
-    },
-    {
-        path: '/',
-        component: AppMain,
-        name: 'Charts',
-        iconCls: 'fa fa-bar-chart',
-        children: [
-            { path: '/echarts', component: echarts, name: 'echarts' }
+            { path: '/help', component: Help, name: '帮助', hidden: false }
         ]
     },
     {
