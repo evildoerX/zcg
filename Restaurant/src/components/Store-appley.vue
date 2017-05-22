@@ -17,7 +17,7 @@
       </div>
     </el-row>
     <div class="breadcrumb">
-      <el-button style="margin-top: 12px;" @click="next">下一步</el-button>
+      <!-- <el-button style="margin-top: 12px;" @click="next">下一步</el-button> -->
     	<el-steps 
     	:space="142" 
     	:active="active" 
@@ -34,7 +34,7 @@
     </div>
     <div class="content">
     	<el-card class="box-card">
-        	<store2 />
+        	<store4 />
         </el-tabs>
       </el-card>
       <div style="height:80px;">
@@ -44,10 +44,10 @@
 </template>
 
 <script>
-import store2 from './component/store/store2'
+import store4 from './component/store/store4'
   export default {
     components: {
-    	store2
+    	store4
     },
     data() {
       return {
