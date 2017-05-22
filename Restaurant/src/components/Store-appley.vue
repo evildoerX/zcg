@@ -34,7 +34,7 @@
     </div>
     <div class="content">
     	<el-card class="box-card">
-        	<store1 />
+        	<store2 />
         </el-tabs>
       </el-card>
       <div style="height:80px;">
@@ -44,10 +44,10 @@
 </template>
 
 <script>
-import store1 from './component/store/store1'
+import store2 from './component/store/store2'
   export default {
     components: {
-    	store1
+    	store2
     },
     data() {
       return {

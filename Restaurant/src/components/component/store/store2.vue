@@ -1,89 +1,182 @@
 <template>
-  <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-    <el-form-item label="活动名称" prop="name">
-      <el-input v-model="ruleForm.name"></el-input>
-    </el-form-item>
-    <el-form-item label="活动区域" prop="region">
-      <el-select v-model="ruleForm.region" placeholder="请选择活动区域">
-        <el-option label="区域一" value="shanghai"></el-option>
-        <el-option label="区域二" value="beijing"></el-option>
-      </el-select>
-    </el-form-item>
-    <el-form-item label="活动时间" required>
-      <el-col :span="11">
-        <el-form-item prop="date1">
-          <el-date-picker type="date" placeholder="选择日期" v-model="ruleForm.date1" style="width: 100%;"></el-date-picker>
+  <div>
+    <el-form :model="ruleForm1" :rules="rules1" ref="ruleForm1" label-width="100px" class="demo-ruleForm">
+      <el-form-item label="证件类型" prop="region1">
+        <el-select v-model="ruleForm1.region1" placeholder="身份证">
+          <el-option label="身份证" value="rf1-1"></el-option>
+          <el-option label="港澳居民来往内地通行证" value="rf1-2"></el-option>
+          <el-option label="台胞证" value="rf1-3"></el-option>
+          <el-option label="护照" value="rf1-4"></el-option>
+        </el-select>
+      </el-form-item>
+      <div class="erji">
+        <el-form-item label="真实姓名" prop="name1">
+          <el-input style="width:218px" v-model="ruleForm1.name1"></el-input>
         </el-form-item>
-      </el-col>
-      <el-col class="line" :span="2">-</el-col>
-      <el-col :span="11">
-        <el-form-item prop="date2">
-          <el-time-picker type="fixed-time" placeholder="选择时间" v-model="ruleForm.date2" style="width: 100%;"></el-time-picker>
+        <el-form-item label="证件号码" prop="num1">
+          <el-input style="width:218px" v-model="ruleForm1.num1"></el-input>
         </el-form-item>
-      </el-col>
-    </el-form-item>
-    <el-form-item label="即时配送" prop="delivery">
-      <el-switch on-text="" off-text="" v-model="ruleForm.delivery"></el-switch>
-    </el-form-item>
-    <el-form-item label="活动性质" prop="type">
-      <el-checkbox-group v-model="ruleForm.type">
-        <el-checkbox label="美食/餐厅线上活动" name="type"></el-checkbox>
-        <el-checkbox label="地推活动" name="type"></el-checkbox>
-        <el-checkbox label="线下主题活动" name="type"></el-checkbox>
-        <el-checkbox label="单纯品牌曝光" name="type"></el-checkbox>
-      </el-checkbox-group>
-    </el-form-item>
-    <el-form-item label="特殊资源" prop="resource">
-      <el-radio-group v-model="ruleForm.resource">
-        <el-radio label="线上品牌商赞助"></el-radio>
-        <el-radio label="线下场地免费"></el-radio>
-      </el-radio-group>
-    </el-form-item>
-    <el-form-item label="活动形式" prop="desc">
-      <el-input type="textarea" v-model="ruleForm.desc"></el-input>
-    </el-form-item>
-    <el-form-item>
-      <el-button type="primary" @click="submitForm('ruleForm')">立即创建</el-button>
-      <el-button @click="resetForm('ruleForm')">重置</el-button>
-    </el-form-item>
-  </el-form>
+        <el-form-item label="证件照片" prop="pic1">
+          <img src="../../../assets/user_pic.jpg" alt="">
+        </el-form-item>
+      </div>  
+    </el-form>
+    <el-form :model="ruleForm2" :rules="rules2" ref="ruleForm2" label-width="100px" class="demo-ruleForm">
+      <el-form-item label="主体资质" prop="region2">
+        <el-select v-model="ruleForm2.region2" placeholder="营业执照">
+          <el-option label="营业执照" value="rf2-1"></el-option>
+          <el-option label="事业单位法人证书" value="rf2-2"></el-option>
+          <el-option label="民办非企业单位登记证书" value="rf2-3"></el-option>
+          <el-option label="社会团体法人登记证书" value="rf2-4"></el-option>
+        </el-select>
+      </el-form-item>
+      <div class="erji">
+        <el-form-item label="单位名称" prop="dwname2">
+          <el-input style="width:500px" v-model="ruleForm2.dwname2"></el-input>
+        </el-form-item>
+        <el-form-item label="法定代表人" prop="name2">
+          <el-input style="width:218px" v-model="ruleForm2.name2"></el-input>
+        </el-form-item>
+        <el-form-item label="注册号" prop="num2">
+          <el-input style="width:218px" v-model="ruleForm2.num2"></el-input>
+        </el-form-item>
+        <el-form-item label="注册地址" prop="address2">
+          <el-input style="width:218px" v-model="ruleForm2.address2"></el-input>
+        </el-form-item>
+        <el-form-item label="有效期" prop="time2">
+          <el-date-picker
+            v-model="ruleForm2.time2"
+            type="date"
+            placeholder="选择日期"
+            :picker-options="pickerOptions0">
+          </el-date-picker>
+          <el-checkbox v-model="checked">永久</el-checkbox>
+        </el-form-item>
+        <el-form-item label="资质照片" prop="pic2">
+          <img src="../../../assets/zizhi.jpg" alt="">
+        </el-form-item>
+      </div> 
+    </el-form>
+    <el-form :model="ruleForm3" :rules="rules3" ref="ruleForm3" label-width="100px" class="demo-ruleForm">
+      <el-form-item label="行业资质" prop="region3">
+        <el-select v-model="ruleForm3.region3" placeholder="餐饮服务许可证">
+          <el-option label="餐饮服务许可证" value="rf3-1"></el-option>
+          <el-option label="食品经营许可证" value="rf3-2"></el-option>
+          <el-option label="食品流通许可证" value="rf3-3"></el-option>
+          <el-option label="食品摊贩临时经营公示卡" value="rf3-4"></el-option>
+          <el-option label="全国工业产品生产许可证" value="rf3-5"></el-option>
+          <el-option label="小微餐饮分级证/登记凭证" value="rf3-6"></el-option>
+          <el-option label="食品生产加工作坊准许证" value="rf3-7"></el-option>
+          <el-option label="食品小作坊生产许可证" value="rf3-8"></el-option>
+          <el-option label="食品小作坊登记证" value="rf3-9"></el-option>
+          <el-option label="食品小作坊备案凭证" value="rf3-10"></el-option>
+          <el-option label="食品生产加工小作坊核准证" value="rf3-11"></el-option>
+          <el-option label="小作坊、小餐饮登记证/小摊点备案（登记）卡" value="rf3-12"></el-option>
+          <el-option label="食品摊贩备案证明" value="rf3-13"></el-option>
+          <el-option label="小作坊卫生许可证" value="rf3-14"></el-option>
+          <el-option label="食品摊贩登记卡" value="rf3-15"></el-option>
+          <el-option label="食品经营实名备案证" value="rf3-16"></el-option>
+          <el-option label="小餐饮经营许可证" value="rf3-17"></el-option>
+        </el-select>
+      </el-form-item>
+      <div class="erji">
+        <el-form-item label="单位名称" prop="dwname3">
+          <el-input style="width:500px" v-model="ruleForm3.dwname3"></el-input>
+        </el-form-item>
+        <el-form-item label="法定代表人" prop="name3">
+          <el-input style="width:218px" v-model="ruleForm3.name3"></el-input>
+        </el-form-item>
+        <el-form-item label="许可证编号" prop="num3">
+          <el-input style="width:218px" v-model="ruleForm3.num3"></el-input>
+        </el-form-item>
+        <el-form-item label="许可证地址" prop="address3">
+          <el-input style="width:218px" v-model="ruleForm3.address3"></el-input>
+        </el-form-item>
+        <el-form-item label="有效期" prop="time3">
+          <el-date-picker
+            v-model="ruleForm3.time3"
+            type="date"
+            placeholder="选择日期"
+            :picker-options="pickerOptions0">
+          </el-date-picker>
+          <el-checkbox v-model="checked">永久</el-checkbox>
+        </el-form-item>
+        <el-form-item label="资质照片" prop="pic3">
+          <img src="../../../assets/zizhi2.jpg" alt="">
+        </el-form-item>
+      </div>
+    </el-form>
+  </div>
 </template>
 <script>
   export default {
     data() {
       return {
-        ruleForm: {
-          name: '',
-          region: '',
-          date1: '',
-          date2: '',
-          delivery: false,
-          type: [],
-          resource: '',
-          desc: ''
+        pickerOptions0: {
+          disabledDate(time) {
+            return time.getTime() < Date.now() - 8.64e7;
+          }
         },
-        rules: {
-          name: [
-            { required: true, message: '请输入活动名称', trigger: 'blur' },
-            { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+        value1: '',
+        ruleForm1:{
+          region1: '',
+          name1: '',
+          num1:'',
+          pic1:''
+        },
+        ruleForm2:{
+          region2: '',
+          dwname2: '',
+          name2: '',
+          num2: '',
+          address2: '',
+          time2: '',
+          pic2:''
+        },
+        ruleForm3:{
+          region3: '',
+          dwname3: '',
+          name3: '',
+          num3: '',
+          address3: '',
+          time3: '',
+          pic3:''
+        },
+        rules1: {
+          region1: [
+            { required: true, message: '请选择证件类型', trigger: 'change' }
           ],
-          region: [
-            { required: true, message: '请选择活动区域', trigger: 'change' }
+          name1: [
+            { required: true, message: '请输入真实姓名', trigger: 'blur' }
           ],
-          date1: [
+          num1: [
+            { required: true, message: '请输入证件号码', trigger: 'blur' }
+          ],
+          pic1: [
+            { required: true, message: '请上传正价照片', trigger: 'blur' }
+          ]
+        },
+        rules2: {
+          region2: [
+            { required: true, message: '请选择证件类型', trigger: 'change' }
+          ],
+          dwname2: [
+            { required: true, message: '请输入单位名称', trigger: 'blur' }
+          ],
+          name2: [
+            { required: true, message: '请输入法定代表人名称', trigger: 'blur' }
+          ],
+          num2: [
+            { required: true, message: '请输入注册号', trigger: 'blur' }
+          ],
+          address2: [
+            { required: true, message: '请输入注册地址', trigger: 'blur' }
+          ],
+          time2: [
             { type: 'date', required: true, message: '请选择日期', trigger: 'change' }
           ],
-          date2: [
-            { type: 'date', required: true, message: '请选择时间', trigger: 'change' }
-          ],
-          type: [
-            { type: 'array', required: true, message: '请至少选择一个活动性质', trigger: 'change' }
-          ],
-          resource: [
-            { required: true, message: '请选择活动资源', trigger: 'change' }
-          ],
-          desc: [
-            { required: true, message: '请填写活动形式', trigger: 'blur' }
+          pic2: [
+            { required: true, message: '请上传正价照片', trigger: 'blur' }
           ]
         }
       };
@@ -105,3 +198,16 @@
     }
   }
 </script>
+
+<style scoped lang="scss">
+  .demo-ruleForm {
+    .erji {
+        width: 900px;
+    margin: 0px 0 30px 30px;
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+
+  }
+  }
+  
+</style>
