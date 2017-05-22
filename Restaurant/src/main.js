@@ -13,6 +13,7 @@ import Mock from './mock'
 Mock.bootstrap();
 import 'font-awesome/css/font-awesome.min.css'
 import Qs from 'qs'
+import 'idg-theme/menu.css'
 
 Vue.use(ElementUI)
 Vue.use(VueRouter)

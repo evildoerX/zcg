@@ -1,7 +1,7 @@
 <template>
 	<aside class="sidebar">
 		<p class="menu-label">
-      		服务或者项目名称
+      		阿木奶茶店
     	</p>
 		<el-menu :default-active="$route.path" class="el-menu-vertical-demo" @open="handleopen" @close="handleclose" @select="handleselect"
 			theme="dark" unique-opened router>
@@ -43,8 +43,7 @@
 	top: 60px;
 	left: 0;
 	bottom: 0;
-	// padding: 20px 0 50px;
-	width: 200px;
+	width: 150px;
 	min-width: 45px;
 	max-height: 100vh;
 	height: calc(100% - 50px);
@@ -54,11 +53,10 @@
 	overflow-y: auto;
 	overflow-x: hidden;
 	.menu-label {
-    color: #fff;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 5px;
-    font-size: 14px;
-  }
+	    color: #fff;
+	    padding-top: 15px;
+	    padding-left: 10px;
+	    font-size: 14px;
+	  }
 }
 </style>

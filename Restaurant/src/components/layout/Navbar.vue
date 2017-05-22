@@ -1,18 +1,28 @@
 <template>
 	<el-row class="header">
-		<el-col :span="20" class="logo">
-				<span class="txt">智慧中台</span>
+		<el-col :span="22" class="logo">
+				<span class="txt">商家中心</span>
 			</el-col>
-			<el-col :span="4" class="userinfo">
-				<el-dropdown trigger="click">
-					<span class="el-dropdown-link userinfo-inner"><img :src="this.sysUserAvatar" />
-					</span>
-					<el-dropdown-menu slot="dropdown">
-						<el-dropdown-item>我的消息</el-dropdown-item>
-						<el-dropdown-item>设置</el-dropdown-item>
-						<el-dropdown-item divided @click.native="logout">退出登录</el-dropdown-item>
-					</el-dropdown-menu>
-				</el-dropdown>
+			<el-col :span="2" class="userinfo">
+				<el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+					<!-- <el-submenu index="1">
+						<template slot="title">奶茶店</template>
+						<el-menu-item index="1-1">奶茶店[营业中]</el-menu-item>
+						<el-menu-item index="1-2">查看全部门店</el-menu-item>
+					</el-submenu>
+					<el-menu-item index="3"><i class="el-icon-warning"></i>消息</el-menu-item>
+					<el-submenu index="4">
+						<template slot="title">正在营业</template>
+						<el-menu-item index="4-1">停止营业</el-menu-item>
+						<el-menu-item index="4-2">恢复营业</el-menu-item>
+					</el-submenu> -->
+					<el-submenu index="2">
+						<template style="color:#fff" slot="title">奶茶店</template>
+						<el-menu-item index="2-1">修改密码</el-menu-item>
+						<el-menu-item index="2-2">修改手机</el-menu-item>
+						<el-menu-item index="2-3" @click.native="logout">退出登录</el-menu-item>
+					</el-submenu>
+				</el-menu>
 			</el-col>
 	</el-row>
 </template>
@@ -21,6 +31,7 @@
 	export default {
 		data() {
 			return {
+				activeIndex2: '1',
 				sysUserName: '',
 				sysUserAvatar: ''
 			}
@@ -61,11 +72,15 @@
 			width: 100%;
 			height: 60px;
 			line-height: 60px;
-			background: #1F2D3D;
+			background: #0091ea;
 			color: #c0ccda;
 			.userinfo {
 				text-align: right;
 				padding-right: 35px;
+				.el-menu-demo {
+					background: #0091ea;
+					color: #fff;
+				}
 				.userinfo-inner {
 					color: #c0ccda;
 					cursor: pointer;
@@ -86,7 +101,8 @@
 					margin: 10px 10px 10px 18px;
 				}
 				.txt {
-					color: #20a0ff
+					color: #fff;
+					margin-left:30px;
 				}
 			}
 		}

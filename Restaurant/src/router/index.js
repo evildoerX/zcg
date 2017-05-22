@@ -30,20 +30,100 @@ let routes = [
         iconCls: 'fa fa-address-card',
         leaf: true,//只有一个节点
         children: [
-            { path: '/home', component: Home, name: '主页', hidden: false }
+            { path: '/home', component: Home, name: '首页', hidden: false }
         ]
     },
     {
         path: '/',
         component: AppMain,
-        name: '导航一',
-        iconCls: 'el-icon-message',//图标样式class
+        name: '',
+        iconCls: 'fa fa-address-card',
+        leaf: true,//只有一个节点
         children: [
-            { path: '/table', component: Table, name: 'Table' },
-            { path: '/form', component: Form, name: 'Form' },
-            { path: '/user', component: user, name: '列表' }
+            { path: '/home', component: Home, name: '订单', hidden: false }
         ]
     },
+    {
+        path: '/',
+        component: AppMain,
+        name: '',
+        iconCls: 'fa fa-address-card',
+        leaf: true,//只有一个节点
+        children: [
+            { path: '/home', component: Home, name: '商品', hidden: false }
+        ]
+    },
+    {
+        path: '/',
+        component: AppMain,
+        name: '',
+        iconCls: 'fa fa-address-card',
+        leaf: true,//只有一个节点
+        children: [
+            { path: '/home', component: Home, name: '顾客', hidden: false }
+        ]
+    },
+    {
+        path: '/',
+        component: AppMain,
+        name: '',
+        iconCls: 'fa fa-address-card',
+        leaf: true,//只有一个节点
+        children: [
+            { path: '/home', component: Home, name: '财务', hidden: false }
+        ]
+    },
+    {
+        path: '/',
+        component: AppMain,
+        name: '',
+        iconCls: 'fa fa-address-card',
+        leaf: true,//只有一个节点
+        children: [
+            { path: '/home', component: Home, name: '门店', hidden: false }
+        ]
+    },
+    {
+        path: '/',
+        component: AppMain,
+        name: '',
+        iconCls: 'fa fa-address-card',
+        leaf: true,//只有一个节点
+        children: [
+            { path: '/echarts', component: echarts, name: '数据' }
+        ]
+    },
+    {
+        path: '/',
+        component: AppMain,
+        name: '',
+        iconCls: 'fa fa-address-card',
+        leaf: true,//只有一个节点
+        children: [
+            { path: '/home', component: Home, name: '营销', hidden: false }
+        ]
+    },
+    {
+        path: '/',
+        component: AppMain,
+        name: '',
+        iconCls: 'fa fa-address-card',
+        leaf: true,//只有一个节点
+        children: [
+            { path: '/home', component: Home, name: '店铺推广', hidden: false }
+        ]
+    },
+    {
+        path: '/',
+        component: AppMain,
+        name: '',
+        iconCls: 'fa fa-address-card',
+        leaf: true,//只有一个节点
+        children: [
+            { path: '/home', component: Home, name: '帮助', hidden: false }
+        ]
+    },
+    
     {
         path: '/',
         component: AppMain,
