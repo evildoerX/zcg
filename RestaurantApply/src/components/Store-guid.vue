@@ -17,57 +17,35 @@
       </div>
     </el-row>
     <div class="breadcrumb">
-      <el-breadcrumb separator="/">
-        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item>申请记录</el-breadcrumb-item>
-      </el-breadcrumb>
+      请准备号以下材料，申请开店更方便
     </div>
     <div class="content">
-      <el-card class="box-card">
-        <el-button class="sqkd" type="primary" @click="openstore">申请开店</el-button>
-        <el-tabs v-model="activeName" @tab-click="handleClick">
-          <el-tab-pane label="已通过" name="first">
-            <recordpass />
-          </el-tab-pane>
-          <el-tab-pane label="待完善" name="second">
-            <recordcomplete />
-          </el-tab-pane>
-          <el-tab-pane label="审核中" name="third">
-            <recordcheck />
-          </el-tab-pane>
-          <el-tab-pane label="需修改" name="fourth">
-            <recordmodify />
-          </el-tab-pane>
-        </el-tabs>
+    	<el-card class="box-card">
+      <img src="../assets/store_guid.jpg" alt="">
       </el-card>
-      <div style="height:80px;">
+      <div class="btn-box" >
+        <el-button class="btn-next" type="primary" @click="next">我已经准备好资料，进行开店申请</el-button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import recordpass from './component/record/record-pass'
-import recordcomplete from './component/record/record-complete'
-import recordcheck from './component/record/record-check'
-import recordmodify from './component/record/record-modify'
   export default {
     components: {
-      recordpass,
-      recordcomplete,
-      recordcheck,
-      recordmodify
     },
     data() {
       return {
+        type: componentsArr[0],
+      	active: 0,
         activeName: 'second',
         sysUserName: '',
         sysUserAvatar: ''
       }
     },
     methods: {
-      openstore: function() {
-        this.$router.push('/storeguid')
+      next() {
+        this.$router.push('/storeapply');
       },
       handleClick(tab, event) {
         console.log(tab, event);
@@ -131,23 +109,40 @@ import recordmodify from './component/record/record-modify'
       }
     }
     .breadcrumb{
-      width: 1000px;
-      margin: auto;
-      margin-top: 35px;
-      margin-bottom: 10px;
-      padding: 0;
+      height: 60px;
+      line-height: 60px;
+      background-color: #445a64;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      font-size: 18px;
     }
     .content {
       width: 1000px;
       margin: auto;
       .box-card {
-        height: 400px;
         position:relative;
         .sqkd {
           position:absolute;
           right:20px;
-          z-index: 999;
         }
+      }
+    }
+    .btn-box{
+      height:80px;
+      margin-top: 30px;
+      margin-bottom: 100px;
+      text-align: center;
+      .btn-pre {
+        width: 198px;
+        height: 50px;
+        margin-right: 15px;
+        font-size:16px;
+      }
+      .btn-next {
+        height: 50px;
+        width: 318px;
+        font-size:16px;
       }
     }
 </style>
