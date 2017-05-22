@@ -60,7 +60,7 @@ import recordmodify from './component/record/record-modify'
     },
     data() {
       return {
-        activeName: 'second',
+        activeName: 'third',
         sysUserName: '',
         sysUserAvatar: ''
       }
