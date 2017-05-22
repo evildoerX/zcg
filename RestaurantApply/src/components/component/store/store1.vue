@@ -4,13 +4,13 @@
       18651908626
     </el-form-item>
     <el-form-item label="门店名称" prop="storename">
-      <el-input v-model="ruleForm.storename"></el-input>
+      <el-input style="width:350px;" v-model="ruleForm.storename"></el-input>
     </el-form-item>
     <el-form-item label="外卖电话" prop="phone">
-      <el-input v-model="ruleForm.name"></el-input>
+      <el-input style="width:220px;" v-model="ruleForm.phone"></el-input>
     </el-form-item>
     <el-form-item label="联系人名称" prop="name">
-      <el-input v-model="ruleForm.name"></el-input>
+      <el-input style="width:220px;" v-model="ruleForm.name"></el-input>
     </el-form-item>
     <el-form-item label="门店分类" prop="storetype">
       <el-select v-model="ruleForm.storetype" placeholder="请选择活动区域">
@@ -25,10 +25,10 @@
       </el-radio-group>
     </el-form-item>
     <el-form-item label="城市" prop="city">
-      <el-input v-model="ruleForm.city"></el-input>
+      <el-input style="width:350px;" v-model="ruleForm.city"></el-input>
     </el-form-item>
     <el-form-item label="详细地址" prop="adress">
-      <el-input style="width:500px;"  v-model="ruleForm.adress"></el-input>
+      <el-input style="width:350px;"  v-model="ruleForm.adress"></el-input>
       <el-button type="primary">去定位</el-button>
       <div>
         <img src="../../../assets/store_map.jpg" alt="">

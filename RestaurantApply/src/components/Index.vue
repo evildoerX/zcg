@@ -84,7 +84,7 @@
                   localStorage.setItem('recordlist', JSON.stringify(recordlistnum));
                   this.$router.push({ path: '/table' });
                 } else {
-                  this.$router.push({ path: '/recordlist' });
+                  this.$router.push({ path: '/storeguid' });
                 }
               }
             });
