@@ -17,7 +17,6 @@
       </div>
     </el-row>
     <div class="breadcrumb">
-      <!-- <el-button style="margin-top: 12px;" @click="next">下一步</el-button> -->
     	<el-steps 
     	:space="142" 
     	:active="active" 
@@ -34,23 +33,48 @@
     </div>
     <div class="content">
     	<el-card class="box-card">
-        	<store4 />
-        </el-tabs>
+        <component :is="type"></component>
       </el-card>
-      <div style="height:80px;">
+      <div class="btn-box" >
+        <el-button class="btn-pre" @click="pre">上一步</el-button>
+        <el-button class="btn-next" type="primary" @click="next">提交并进入下一步</el-button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import store4 from './component/store/store7'
+import store1 from './component/store/store1'
+import store2 from './component/store/store2'
+import store3 from './component/store/store3'
+import store4 from './component/store/store4'
+import store5 from './component/store/store5'
+import store6 from './component/store/store6'
+import store7 from './component/store/store7'
+
+const componentsArr = [
+    store1,
+    store2,
+    store3,
+    store4,
+    store5,
+    store6,
+    store7
+]
+
   export default {
     components: {
-    	store4
+    	store1,
+      store2,
+      store3,
+      store4,
+      store5,
+      store6,
+      store7
     },
     data() {
       return {
+        type: componentsArr[0],
       	active: 0,
         activeName: 'second',
         sysUserName: '',
@@ -58,8 +82,20 @@ import store4 from './component/store/store7'
       }
     },
     methods: {
+      pre() {
+        if (--this.active <= 0) {
+          this.$router.push('/recordlist');
+          return
+        }
+        this.type = componentsArr[this.active]
+      },
       next() {
-        if (this.active++ > 5) this.active = 0;
+        if (++this.active >= 7) {
+          this.$router.push('/recordlist');
+          return
+          console.log(this.type)
+        }
+        this.type = componentsArr[this.active]
       },
       handleClick(tab, event) {
         console.log(tab, event);
@@ -138,6 +174,23 @@ import store4 from './component/store/store7'
           position:absolute;
           right:20px;
         }
+      }
+    }
+    .btn-box{
+      height:80px;
+      margin-top: 30px;
+      margin-bottom: 100px;
+      text-align: center;
+      .btn-pre {
+        width: 198px;
+        height: 50px;
+        margin-right: 15px;
+        font-size:16px;
+      }
+      .btn-next {
+        height: 50px;
+        width: 318px;
+        font-size:16px;
       }
     }
 </style>
