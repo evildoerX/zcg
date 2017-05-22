@@ -20,20 +20,19 @@
 							    	</div>
 							    </div>
 							    <div class="order_stat">
-							    	<el-steps :space="100" direction="vertical" :active="1">
-									  <el-step title="步骤 1" icon="warning"></el-step>
-									  <el-step title="步骤 2"></el-step>
-									  <el-step title="步骤 3"></el-step>
-									</el-steps>
+							    	<el-collapse-item title="3 【预】4月1日 12：15 送达" name="1-1">
+										<img src="../../assets/order/order_stat.jpg"  alt="">
+									</el-collapse-item>
 							    </div>
 							    <div class="order_item">
-							    	
+							    	<img src="../../assets/order/order_item.jpg"  alt="">
 							    </div>
 							    <div class="order_totle">
-							    	
+							    	<span>本单实收总金额：</span>
+							    	<span>￥ 15 元</span>
 							    </div>
 							    <div class="order_footer">
-							    	
+							    	<img src="../../assets/order/order_footer.jpg"  alt="">
 							    </div>
 							  </el-collapse-item>
 							  <el-collapse-item title="3 【预】4月1日 12：15 送达" name="2">
