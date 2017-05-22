@@ -72,13 +72,10 @@
           name: '',
           storetype:'',
           time:'',
-          region: '',
-          date1: '',
-          date2: '',
-          delivery: false,
-          type: [],
-          resource: '',
-          desc: ''
+          city: '',
+          adress: '',
+          storepic: '',
+          storelogo: ''
         },
         rules: {
           storename: [
@@ -99,20 +96,17 @@
           time: [
             { required: true, message: '请选择营业时间', trigger: 'change' }
           ],
-          date1: [
-            { type: 'date', required: true, message: '请选择日期', trigger: 'change' }
+          city: [
+            { required: true, message: '请选择城市', trigger: 'change' }
           ],
-          date2: [
-            { type: 'date', required: true, message: '请选择时间', trigger: 'change' }
+          adress: [
+            { required: true, message: '请输入详细地址', trigger: 'change' }
           ],
-          type: [
-            { type: 'array', required: true, message: '请至少选择一个活动性质', trigger: 'change' }
+          storepic: [
+            { required: true, message: '请上传门店照片', trigger: 'change' }
           ],
-          resource: [
-            { required: true, message: '请选择活动资源', trigger: 'change' }
-          ],
-          desc: [
-            { required: true, message: '请填写活动形式', trigger: 'blur' }
+          storelogo: [
+            { required: true, message: '请上传门店Logo', trigger: 'change' }
           ]
         }
       };
