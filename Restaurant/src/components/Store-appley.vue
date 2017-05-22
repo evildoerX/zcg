@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import store4 from './component/store/store6'
+import store4 from './component/store/store7'
   export default {
     components: {
     	store4

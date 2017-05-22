@@ -74,7 +74,7 @@
             100/100
           </div>
           <div class="pic">
-            <img class="img" src="https://fuss10.elemecdn.com/6/c5/aa2e9478d5db46d9592310c686715jpeg.jpeg" alt="">
+            <img class="img" src="https://fuss10.elemecdn.com/2/d1/068ccfd3ca5cea88bca88ae8da591jpeg.jpeg" alt="">
           </div>
         </div>
         <div class="item">
@@ -88,7 +88,7 @@
             100/100
           </div>
           <div class="pic">
-            <img class="img" src="https://fuss10.elemecdn.com/6/c5/aa2e9478d5db46d9592310c686715jpeg.jpeg" alt="">
+            <img class="img" src="https://fuss10.elemecdn.com/3/b4/d420beac6f493f88de41445eb4527jpeg.jpeg" alt="">
           </div>
         </div>
       </div>
