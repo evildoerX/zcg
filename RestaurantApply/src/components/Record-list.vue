@@ -24,7 +24,7 @@
     </div>
     <div class="content">
       <el-card class="box-card">
-        <el-button class="sqkd" type="primary">申请开店</el-button>
+        <el-button class="sqkd" type="primary" @click="openstore">申请开店</el-button>
         <el-tabs v-model="activeName" @tab-click="handleClick">
           <el-tab-pane label="已通过" name="first">
             <recordpass />
@@ -66,6 +66,9 @@ import recordmodify from './component/record/record-modify'
       }
     },
     methods: {
+      openstore: function() {
+        this.$router.push('/storeapply')
+      },
       handleClick(tab, event) {
         console.log(tab, event);
       },
@@ -143,6 +146,7 @@ import recordmodify from './component/record/record-modify'
         .sqkd {
           position:absolute;
           right:20px;
+          z-index: 999;
         }
       }
     }

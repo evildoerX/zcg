@@ -1,7 +1,7 @@
 import Login from '../components/Login.vue'
 import Index from '../components/Index.vue'
 import Record_list from '../components/Record-list.vue'
-import Store_appley from '../components/Store-appley.vue'
+import Store_apply from '../components/Store-apply.vue'
 import NotFound from '../components/404.vue'
 import AppMain from '../components/layout/AppMain.vue'
 import Home from '../view/Home.vue'
@@ -33,8 +33,8 @@ let routes = [
         hidden: true
     },
     {
-        path: '/storeappley',
-        component: Store_appley,
+        path: '/storeapply',
+        component: Store_apply,
         name: '',
         hidden: true
     },

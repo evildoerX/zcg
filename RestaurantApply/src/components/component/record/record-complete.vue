@@ -106,6 +106,7 @@
     },
     methods: {
       handleEdit(index, row) {
+        this.$router.push('/storeapply')
         console.log(index, row);
       },
       handleDelete(index, row) {
