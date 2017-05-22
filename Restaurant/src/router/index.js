@@ -38,11 +38,11 @@ let routes = [
     {
         path: '/',
         component: AppMain,
-        name: '',
+        name: '订单',
         iconCls: 'fa fa-address-card',
-        leaf: true,//只有一个节点
         children: [
-            { path: '/order', component: Order, name: '订单', hidden: false }
+            { path: '/order', component: Order, name: '订单处理', hidden: false },
+            { path: '/order', component: Order, name: '订单查询', hidden: false }
         ]
     },
     {

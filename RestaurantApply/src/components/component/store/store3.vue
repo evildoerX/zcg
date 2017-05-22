@@ -130,7 +130,7 @@
           </div>
         </div>
         <div class="choose-btn">
-          <el-button >选 择</el-button>
+          <el-button v-bind:class="{select_btn}" @click="select" >{{select_name}}</el-button>
         </div>
         <el-button type="text">收费明细</el-button>
       </div>
@@ -141,11 +141,21 @@
   export default {
     data() {
       return {
-        
+        select_btn:false,
+        select_name: '选择'
       };
     },
     methods: {
-      
+      select() {
+        if (this.select_btn === false) {
+          this.select_btn = true;
+          this.select_name = "已选择"
+        }
+        if (this.select_btn === true) {
+          this.select_btn = false;
+          this.select_name = "选择"
+        }
+      }
     }
   }
 </script>
@@ -213,6 +223,10 @@
       margin: 0 auto;
       margin-top: 10px;
       line-height: 31px;
+      .select_btn{
+        background-color:#4db3ff;
+        color: #fff;
+      }
     }
   }
   .card:hover {
