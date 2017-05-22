@@ -6,18 +6,18 @@
         <el-radio class="radio" v-model="radio" label="2">对公</el-radio>
       </el-form-item>
       <div class="erji">
-        <el-form-item label="银行卡号" prop="name1">
-          <el-input style="width:400px" v-model="ruleForm1.name1"></el-input>
+        <el-form-item label="银行卡号" prop="num">
+          <el-input style="width:400px" v-model="ruleForm1.num"></el-input>
         </el-form-item>
-        <el-form-item label="所属银行" prop="num1">
-          <el-input style="width:300px" v-model="ruleForm1.num1"></el-input>
+        <el-form-item label="所属银行" prop="yh">
+          <el-input style="width:300px" v-model="ruleForm1.yh"></el-input>
         </el-form-item>
-        <el-form-item label="开户城市" prop="num1">
-          <el-input style="width:150px" v-model="ruleForm1.num1"></el-input>
-          <el-input style="width:150px" v-model="ruleForm1.num1"></el-input>
+        <el-form-item label="开户城市" prop="city">
+          <el-input style="width:150px" v-model="ruleForm1.city"></el-input>
+          <el-input style="width:150px" v-model="ruleForm1.city2"></el-input>
         </el-form-item>
-        <el-form-item label="开户支行" prop="num1">
-          <el-input style="width:300px" v-model="ruleForm1.num1"></el-input>
+        <el-form-item label="开户支行" prop="zh">
+          <el-input style="width:300px" v-model="ruleForm1.zh"></el-input>
         </el-form-item>
         <div class="yh_info">
           <div class="tip">
@@ -64,22 +64,24 @@
         radio: '1',
         ruleForm1:{
           region1: '',
-          name1: '',
-          num1:'',
-          pic1:''
+          num: '',
+          yh:'',
+          city:'',
+          city2:'',
+          zh:''
         },
         rules1: {
-          region1: [
-            { required: true, message: '请选择证件类型', trigger: 'change' }
+          num: [
+            { required: true, message: '请输入银行卡号', trigger: 'blur' }
           ],
-          name1: [
-            { required: true, message: '请输入真实姓名', trigger: 'blur' }
+          yh: [
+            { required: true, message: '请输入所属银行', trigger: 'blur' }
           ],
-          num1: [
-            { required: true, message: '请输入证件号码', trigger: 'blur' }
+          city: [
+            { required: true, message: '请选择开户城市', trigger: 'blur' }
           ],
-          pic1: [
-            { required: true, message: '请上传正价照片', trigger: 'blur' }
+          zh: [
+            { required: true, message: '请输入开户支行', trigger: 'blur' }
           ]
         }
       };
