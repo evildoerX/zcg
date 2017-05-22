@@ -1,5 +1,6 @@
 <template>
   <div>
+    <img src="../assets/bg.jpg" alt="">
     <div class="page_info">
         <el-button class="kd" type="primary" @click="dialogFormVisible = true">自助开店</el-button>
         <el-button class="bwkd" type="primary" @click="dialogFormVisible = true">帮我开店</el-button>
@@ -101,9 +102,6 @@
 
 <style lang="scss" scoped>
   .page_info {
-    // backgroundImage: 'url(' + require('../assets/bg.jpg') + ')',
-    background-image: url(../assets/bg.jpg);
-    height: 770px;
     .kd {
       position:absolute;
       top:410px;
