@@ -1,21 +1,21 @@
 <template>
   <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="150px" class="demo-ruleForm">
-    <el-form-item label="门店绑定手机号：">
+    <el-form-item label="供应商绑定手机号：">
       18651908626
     </el-form-item>
-    <el-form-item label="门店名称" prop="storename">
+    <el-form-item label="供应商名称" prop="storename">
       <el-input style="width:350px;" v-model="ruleForm.storename"></el-input>
     </el-form-item>
-    <el-form-item label="外卖电话" prop="phone">
+    <el-form-item label="电话" prop="phone">
       <el-input style="width:220px;" v-model="ruleForm.phone"></el-input>
     </el-form-item>
     <el-form-item label="联系人名称" prop="name">
       <el-input style="width:220px;" v-model="ruleForm.name"></el-input>
     </el-form-item>
-    <el-form-item label="门店分类" prop="storetype">
-      <el-select v-model="ruleForm.storetype" placeholder="请选择活动区域">
-        <el-option label="区域一" value="shanghai"></el-option>
-        <el-option label="区域二" value="beijing"></el-option>
+    <el-form-item label="供应商分类" prop="storetype">
+      <el-select v-model="ruleForm.storetype" placeholder="请选择供应商分类">
+        <el-option label="生鲜" value="shanghai"></el-option>
+        <el-option label="调料" value="beijing"></el-option>
       </el-select>
     </el-form-item>
     <el-form-item label="营业时间" prop="time">
@@ -34,7 +34,7 @@
         <img src="../../../assets/store_map.jpg" alt="">
       </div>
     </el-form-item>
-    <el-form-item label="门店照片" prop="storepic">
+    <el-form-item label="供应商照片" prop="storepic">
       <div>
         <div class="storepic">
           <img src="../../../assets/store_pic.jpg" alt="">
@@ -50,7 +50,7 @@
         </div>
       </div>
     </el-form-item>
-    <el-form-item label="门店Logo" prop="storelogo">
+    <el-form-item label="供应商Logo" prop="storelogo">
       <div>
         <div>
           <img src="../../../assets/store_logo.jpg" alt="">
@@ -79,7 +79,7 @@
         },
         rules: {
           storename: [
-            { required: true, message: '请输入门店名称', trigger: 'blur' },
+            { required: true, message: '请输入供应商名称', trigger: 'blur' },
             { min: 2, max: 20, message: '长度在 2 到 20 个字符', trigger: 'blur' }
           ],
           phone: [
@@ -103,10 +103,10 @@
             { required: true, message: '请输入详细地址', trigger: 'change' }
           ],
           storepic: [
-            { required: true, message: '请上传门店照片', trigger: 'change' }
+            { required: true, message: '请上传供应商照片', trigger: 'change' }
           ],
           storelogo: [
-            { required: true, message: '请上传门店Logo', trigger: 'change' }
+            { required: true, message: '请上传供应商Logo', trigger: 'change' }
           ]
         }
       };

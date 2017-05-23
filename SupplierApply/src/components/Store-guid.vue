@@ -3,7 +3,7 @@
     <el-row class="header">
       <div class="content">
         <el-col :span="20" class="txt">
-        开店申请
+        入驻供应商平台申请
         </el-col>
         <el-col :span="4" class="userinfo">
           <el-dropdown trigger="click">
@@ -17,14 +17,14 @@
       </div>
     </el-row>
     <div class="breadcrumb">
-      请准备号以下材料，申请开店更方便
+      请准备号以下材料，申请入驻更方便
     </div>
     <div class="content">
     	<el-card class="box-card">
       <img src="../assets/store_guid.jpg" alt="">
       </el-card>
       <div class="btn-box" >
-        <el-button class="btn-next" type="primary" @click="next">我已经准备好资料，进行开店申请</el-button>
+        <el-button class="btn-next" type="primary" @click="next">我已经准备好资料，进行入驻供应商平台申请</el-button>
       </div>
     </div>
   </div>
@@ -140,7 +140,7 @@
       }
       .btn-next {
         height: 50px;
-        width: 318px;
+        width: 350px;
         font-size:16px;
       }
     }

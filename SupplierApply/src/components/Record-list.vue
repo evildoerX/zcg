@@ -3,7 +3,7 @@
     <el-row class="header">
       <div class="content">
         <el-col :span="20" class="txt">
-        开店申请
+        入驻供应商平台申请
         </el-col>
         <el-col :span="4" class="userinfo">
           <el-dropdown trigger="click">
@@ -24,7 +24,7 @@
     </div>
     <div class="content">
       <el-card class="box-card">
-        <el-button class="sqkd" type="primary" @click="openstore">申请开店</el-button>
+        <el-button class="sqkd" type="primary" @click="openstore">申请入驻供应商平台</el-button>
         <el-tabs v-model="activeName" @tab-click="handleClick">
           <el-tab-pane label="已通过" name="first">
             <recordpass />

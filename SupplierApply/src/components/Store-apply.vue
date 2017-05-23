@@ -3,7 +3,7 @@
     <el-row class="header">
       <div class="content">
         <el-col :span="20" class="txt">
-        开店申请
+        入驻供应商平台申请
         </el-col>
         <el-col :span="4" class="userinfo">
           <el-dropdown trigger="click">
@@ -22,7 +22,7 @@
     	:active="active" 
     	:center="true"
     	finish-status="success">
-		  <el-step title="门店信息"></el-step>
+		  <el-step title="供应商信息"></el-step>
 		  <el-step title="资质信息"></el-step>
 		  <el-step title="合作方案"></el-step>
 		  <el-step title="配送方案"></el-step>
@@ -92,7 +92,7 @@ const componentsArr = [
       },
       next() {
         if (this.active === 5) {
-          this.btn_name="提交并申请开店"
+          this.btn_name="提交并申请入驻供应商平台"
         }
         if (++this.active >= 7) {
           this.$router.push('/recordlist');

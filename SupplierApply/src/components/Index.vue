@@ -2,8 +2,8 @@
   <div>
     <img src="../assets/bg.jpg" alt="">
     <div class="page_info">
-        <el-button class="kd" type="primary" @click="dialogFormVisible = true">自助开店</el-button>
-        <el-button class="bwkd" type="primary" @click="dialogFormVisible = true">帮我开店</el-button>
+        <el-button class="kd" type="primary" @click="dialogFormVisible = true">自助入驻</el-button>
+        <el-button class="bwkd" type="primary" @click="dialogFormVisible = true">帮我入驻</el-button>
     </div>
     <el-dialog title="申请入驻" :visible.sync="dialogFormVisible" size="tiny">
         <el-form :model="ruleForm2" :rules="rules2" ref="ruleForm2" label-position="left" label-width="0px" class="demo-ruleForm login-container">

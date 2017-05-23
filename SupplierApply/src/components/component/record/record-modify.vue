@@ -4,7 +4,7 @@
     border
     style="width: 100%">
     <el-table-column
-      label="门店名称"
+      label="供应商名称"
       width="150">
       <template scope="scope">
         <span style="margin-left: 10px">{{ scope.row.m_name }}</span>
@@ -23,7 +23,7 @@
       <template scope="scope">
         <el-popover trigger="hover" placement="top">
           <p>姓名: {{ scope.row.name }}</p>
-          <p>门店地址: {{ scope.row.address }}</p>
+          <p>供应商地址: {{ scope.row.address }}</p>
           <div slot="reference" class="name-wrapper">
             <el-tag>{{ scope.row.name }}</el-tag>
           </div>
@@ -70,7 +70,7 @@
     data() {
       return {
         tableData: [{
-          m_name: '茶壶店',
+          m_name: '生鲜食材',
           id: '10468',
           name: '程浩',
           phone: '18651908626',
