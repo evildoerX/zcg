@@ -1,11 +1,9 @@
 <template>
     <div class="store">
-        <div class="zongping">
-            <img src="../../assets/help/tsfk/1.jpg" alt="">
-        </div>
-        <div class="info">
-            <img src="../../assets/help/tsfk/2.jpg" alt="">
-        </div>
+    <img src="../../assets/help/tsfk/1.jpg" alt="">
+    <div class="img2">
+        <img src="../../assets/help/tsfk/2.jpg" alt="">
+    </div>
     </div>
 </template>
 
@@ -16,16 +14,11 @@
 
 <style scoped lang="scss">
 .store{
-    // width: 1000px;
-    // margin: 0 auto;
-    .zongping{
-      border-bottom: 20px solid #f1f2f7;
-    }
-    .data{
-    border-bottom: 20px solid #f1f2f7;
-    }
-    .info{
-        border-bottom: 20px solid #f1f2f7;
+    .img2{
+        position:absolute;
+        top: 20px;
+        right:0px;
+        border-left: 2px solid #f1f2f7;
     }
 }
 </style>
