@@ -1,8 +1,8 @@
 <template>
 	<aside class="sidebar">
-		<p class="menu-label">
+		<!-- <p class="menu-label">
       		服务或者项目名称
-    	</p>
+    	</p> -->
 		<el-menu :default-active="$route.path" class="el-menu-vertical-demo" @open="handleopen" @close="handleclose" @select="handleselect"
 			theme="dark" unique-opened router>
 			<template v-for="(item,index) in $router.options.routes" v-if="!item.hidden" :key="">
