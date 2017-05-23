@@ -1,19 +1,29 @@
 <template>
-  <div class="login-container">
-    <div class="title">
-      点击可以查看对应原型
-    </div>
-    <div class="box" v-for="item in tableData">
-      <div class="btn">{{item.name}}</div>
-      <div class="tip">{{item.address}}</div>
-    </div>
+  <div>
+      <div class="login-container">
+        <div class="title">
+          点击可以查看对应原型
+        </div>
+        <div class="box" v-for="item in tableData">
+          <div  class="btn">{{item.name}}</div>
+          <div class="tip">{{item.address}}</div>
+        </div>
+      </div>
+      <div class="pic">
+        <iframe src="http://www.processon.com/view/link/5924628be4b0bb04c34cbef6" width="800" height="620"></iframe> 
+      </div>
   </div>
 </template>
 
 <script>
+import hello from './Hello.vue'
     export default {
+      components:{
+        hello
+      },
       data() {
         return {
+          app_pane:false,
           tableData: [{
             name: '食客手机app',
             address: '食客点餐时使用的app'
@@ -42,6 +52,11 @@
   </script>
 
 <style lang="scss" scoped>
+  .pic {
+    position:absolute;
+    top:10px;
+    left:550px;
+  }
   .login-container {
     /*box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);*/
     position: absolute;
@@ -55,6 +70,7 @@
     border: 1px solid #8492A6;
     width: 500px;
     padding: 10px 10px 10px 10px;
+
     .title {
       font-size:18px;
       text-align:center;
