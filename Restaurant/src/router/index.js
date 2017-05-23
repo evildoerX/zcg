@@ -42,7 +42,7 @@ let routes = [
         path: '/',
         component: AppMain,
         name: '',
-        iconCls: 'fa fa-address-card',
+        iconCls: 'iconfont icon-shouye_shouye',
         leaf: true,//只有一个节点
         children: [
             { path: '/home', component: Home, name: '首页', hidden: false }
@@ -52,7 +52,7 @@ let routes = [
         path: '/',
         component: AppMain,
         name: '订单',
-        iconCls: 'fa fa-address-card',
+        iconCls: 'iconfont icon-2',
         children: [
             { path: '/order', component: Order, name: '订单处理', hidden: false },
             { path: '/ordercheck', component: Ordercheck, name: '订单查询', hidden: false }
@@ -62,7 +62,7 @@ let routes = [
         path: '/',
         component: AppMain,
         name: '',
-        iconCls: 'fa fa-address-card',
+        iconCls: 'iconfont icon-jingxuan',
         leaf: true,//只有一个节点
         children: [
             { path: '/item', component: Item, name: '商品', hidden: false },
@@ -74,7 +74,7 @@ let routes = [
         path: '/',
         component: AppMain,
         name: '顾客',
-        iconCls: 'fa fa-address-card',
+        iconCls: 'iconfont icon-customer',
         children: [
             { path: '/user', component: User, name: '顾客评价', hidden: false }
         ]
@@ -83,7 +83,7 @@ let routes = [
         path: '/',
         component: AppMain,
         name: '财务',
-        iconCls: 'fa fa-address-card',
+        iconCls: 'iconfont icon-caiwu',
         children: [
             { path: '/finance', component: Finance, name: '资金管理', hidden: false },
             { path: '/billrecord', component: Billrecord, name: '账单记录', hidden: false }
@@ -93,7 +93,7 @@ let routes = [
         path: '/',
         component: AppMain,
         name: '门店',
-        iconCls: 'fa fa-address-card',
+        iconCls: 'iconfont icon-iconfontdianpu5',
         children: [
             { path: '/store', component: Store, name: '门店信息', hidden: false },
             { path: '/peisong', component: Peisong, name: '配送管理', hidden: false },
@@ -104,7 +104,7 @@ let routes = [
         path: '/',
         component: AppMain,
         name: '数据',
-        iconCls: 'fa fa-address-card',
+        iconCls: 'iconfont icon-iconfontdata',
         children: [
             { path: '/data', component: Data, name: '营业统计', hidden: false },
             { path: '/pmll', component: pmll, name: '排名流量', hidden: false },
@@ -117,7 +117,7 @@ let routes = [
         path: '/',
         component: AppMain,
         name: '营销',
-        iconCls: 'fa fa-address-card',
+        iconCls: 'iconfont icon-yingxiao',
         children: [
             { path: '/sell', component: Sell, name: '平台活动', hidden: false },
             { path: '/zjhd', component: zjhd, name: '自建活动', hidden: false }
@@ -127,7 +127,7 @@ let routes = [
         path: '/',
         component: AppMain,
         name: '店铺推广',
-        iconCls: 'fa fa-address-card',
+        iconCls: 'iconfont icon-msnui-market',
         children: [
             { path: '/spread', component: Spread, name: '竞价推广', hidden: false }
             // { path: '/spreadmonsy', component: Spreadmonsy, name: '推广资金', hidden: false }
@@ -137,7 +137,7 @@ let routes = [
         path: '/',
         component: AppMain,
         name: '帮助',
-        iconCls: 'fa fa-address-card',
+        iconCls: 'iconfont icon-bangzhu',
         children: [
             { path: '/help', component: Help, name: '消息', hidden: false },
             { path: '/tousu', component: tousu, name: '投诉和反馈', hidden: false }
