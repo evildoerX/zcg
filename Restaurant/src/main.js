@@ -13,12 +13,14 @@ import Mock from './mock'
 Mock.bootstrap();
 import 'font-awesome/css/font-awesome.min.css'
 import Qs from 'qs'
-import 'idg-theme/menu.css'
+import VueDND from 'awe-dnd'
+// import 'idg-theme/menu.css'
 
 Vue.use(ElementUI)
 Vue.use(VueRouter)
 Vue.use(Vuex)
 Vue.use(Qs)
+Vue.use(VueDND)
 
 NProgress.configure({ showSpinner: false });
 

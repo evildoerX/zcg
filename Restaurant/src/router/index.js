@@ -5,8 +5,9 @@ import Home from '../view/Home.vue'
 import Data from '../view/data/Data.vue'
 import Finance from '../view/finance/Finance.vue'
 import Help from '../view/help/Help.vue'
-import Item from '../view/help/Help.vue'
+import Item from '../view/item/Item.vue'
 import Order from '../view/order/Order.vue'
+import Ordercheck from '../view/order/Order-check.vue'
 import Sell from '../view/sell/Sell.vue'
 import Spread from '../view/spread/Spread.vue'
 import Store from '../view/store/Store.vue'
@@ -42,7 +43,7 @@ let routes = [
         iconCls: 'fa fa-address-card',
         children: [
             { path: '/order', component: Order, name: '订单处理', hidden: false },
-            { path: '/order', component: Order, name: '订单查询', hidden: false }
+            { path: '/ordercheck', component: Ordercheck, name: '订单查询', hidden: false }
         ]
     },
     {

@@ -38,6 +38,9 @@
 		},
 		methods: {
 			//退出登录
+			handleSelect(key, keyPath) {
+		    	console.log(key, keyPath);
+		    },
 			logout: function () {
 				var _this = this;
 				this.$confirm('确认退出吗?', '提示', {
