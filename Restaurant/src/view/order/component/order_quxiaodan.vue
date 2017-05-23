@@ -200,6 +200,7 @@
 
 <style scoped lang="scss">
 	.order_new {
+		padding: 5px;
 		.order_list {
 			.order_item{
 				position: relative;
