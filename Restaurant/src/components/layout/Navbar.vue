@@ -1,30 +1,47 @@
 <template>
-	<el-row class="header">
-		<el-col :span="22" class="logo">
-			<span class="txt">商家中心</span>
-		</el-col>
-		<el-col :span="2" class="userinfo">
-			<el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-				<!-- <el-submenu index="1">
-					<template slot="title">奶茶店</template>
-					<el-menu-item index="1-1">奶茶店[营业中]</el-menu-item>
-					<el-menu-item index="1-2">查看全部门店</el-menu-item>
-				</el-submenu>
-				<el-menu-item index="3"><i class="el-icon-warning"></i>消息</el-menu-item>
-				<el-submenu index="4">
-					<template slot="title">正在营业</template>
-					<el-menu-item index="4-1">停止营业</el-menu-item>
-					<el-menu-item index="4-2">恢复营业</el-menu-item>
-				</el-submenu> -->
-				<el-submenu index="2">
-					<template style="color:#fff" slot="title">奶茶店</template>
-					<el-menu-item index="2-1">修改密码</el-menu-item>
-					<el-menu-item index="2-2">修改手机</el-menu-item>
-					<el-menu-item index="2-3" @click.native="logout">退出登录</el-menu-item>
-				</el-submenu>
-			</el-menu>
-		</el-col>
-	</el-row>
+	<div class="header">
+		<div class="logo">
+			商家中心|
+			<span style="color:#fff;font-size:16px;">腊汁肉夹馍 </span>
+		</div>
+		<div class="userinfo">
+			<div class="item_info">
+				<el-dropdown :hide-on-click="false" class="el-dropdown">
+				  <span class="el-dropdown-link">
+				    正在营业中
+				  </span>
+				  <el-dropdown-menu slot="dropdown" class="el-menu">
+				    <el-dropdown-item >
+				    	<span style="color:red;font-size:16px;margin-right: 10px;">紧急关店</span>
+				    	<span style="color:#727375;font-size:12px;">严重影响顾客体验，请谨慎操作</span>
+				    </el-dropdown-item>
+				    <el-dropdown-item>
+				    	<span style="font-size:16px;margin-right: 10px;">延时关店</span>
+				    	<span style="color:#727375;font-size:12px;">关店状态会在5分钟后生效</span>
+				    </el-dropdown-item>
+				    <el-dropdown-item>
+				    	<span style="color:green;font-size:16px;margin-right: 10px;">恢复营业</span>
+				    	<span style="color:#727375;font-size:12px;margin-top: -5px;">按正常的营业时间开店接单</span>
+				    	<i style="color:green" class="el-icon-circle-check"></i>
+				    </el-dropdown-item>
+				    <div style="color:#727375;font-size:12px;margin-top: 10px;">
+				    		（当前营业时间：08:00-21:00）
+				    	</div>
+				  </el-dropdown-menu>
+				</el-dropdown>
+				<el-dropdown :hide-on-click="false" class="el-dropdown">
+				  <span class="el-dropdown-link">
+				    18651908626<i class="el-icon-caret-bottom el-icon--right"></i>
+				  </span>
+				  <el-dropdown-menu slot="dropdown">
+				    <el-dropdown-item>修改密码</el-dropdown-item>
+				    <el-dropdown-item>修改手机</el-dropdown-item>
+				    <el-dropdown-item @click.native="logout">退出登录</el-dropdown-item>
+				  </el-dropdown-menu>
+				</el-dropdown>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -67,44 +84,34 @@
 
 <style scoped lang="scss">
 	.header {
-			position: absolute;
-			top: 0px;
-			bottom: 0px;
-			width: 100%;
-			height: 60px;
-			line-height: 60px;
-			background: #0091ea;
-			color: #c0ccda;
-			.userinfo {
-				text-align: right;
-				padding-right: 35px;
-				.el-menu-demo {
-					background: #0091ea;
-					color: #fff;
-				}
-				.userinfo-inner {
-					color: #c0ccda;
-					cursor: pointer;
-					img {
-						width: 40px;
-						height: 40px;
-						border-radius: 20px;
-						margin: 10px 0px 10px 10px;
-						float: right;
-					}
-				}
-			}
-			.logo {
-				font-size: 22px;
-				img {
-					width: 40px;
-					float: left;
-					margin: 10px 10px 10px 18px;
-				}
-				.txt {
-					color: #fff;
-					margin-left:30px;
-				}
-			}
+		width: 100%;
+		height: 60px;
+		background: #2095f2;
+		line-height: 60px;
+		.logo{
+			font-size: 22px;
+			color: #fff;
+			margin-left:30px;
 		}
+		.userinfo{
+			position:absolute;
+			top: 0px;
+			right: 10px;
+			.item_info{
+				cursor:pointer;
+				float:right;
+				.el-dropdown{
+					padding: 0px 10px 0 10px;
+					height:60px;
+					color:#fff;
+				}
+				.el-dropdown:hover{
+					padding: 0px 10px 0 10px;
+					height:60px;
+					background-color:#20a0ff;
+				}
+			}
+			
+		}
+	}
 </style>
