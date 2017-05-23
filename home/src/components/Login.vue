@@ -1,102 +1,90 @@
 <template>
-  <el-form :model="ruleForm2" :rules="rules2" ref="ruleForm2" label-position="left" label-width="0px" class="demo-ruleForm login-container">
-    <h3 class="title">系统登录</h3>
-    <el-form-item prop="account">
-      <el-input type="text" v-model="ruleForm2.account" auto-complete="off" placeholder="账号"></el-input>
-    </el-form-item>
-    <el-form-item prop="checkPass">
-      <el-input type="password" v-model="ruleForm2.checkPass" auto-complete="off" placeholder="密码"></el-input>
-    </el-form-item>
-    <el-checkbox v-model="checked" checked class="remember">记住密码</el-checkbox>
-    <el-form-item style="width:100%;">
-      <el-button type="primary" style="width:100%;" @click.native.prevent="handleSubmit2" :loading="logining">登录</el-button>
-      <!--<el-button @click.native.prevent="handleReset2">重置</el-button>-->
-    </el-form-item>
-  </el-form>
+  <div class="login-container">
+    <div class="title">
+      点击可以查看对应原型
+    </div>
+    <div class="box" v-for="item in tableData">
+      <div class="btn">{{item.name}}</div>
+      <div class="tip">{{item.address}}</div>
+    </div>
+  </div>
 </template>
 
 <script>
-  import { requestLogin } from '../api/api';
-  import NProgress from 'nprogress'
-  export default {
-    data() {
-      return {
-        logining: false,
-        ruleForm2: {
-          account: 'admin',
-          checkPass: '123456'
-        },
-        rules2: {
-          account: [
-            { required: true, message: '请输入账号', trigger: 'blur' },
-            //{ validator: validaePass }
-          ],
-          checkPass: [
-            { required: true, message: '请输入密码', trigger: 'blur' },
-            //{ validator: validaePass2 }
-          ]
-        },
-        checked: true
-      };
-    },
-    methods: {
-      handleReset2() {
-        this.$refs.ruleForm2.resetFields();
-      },
-      handleSubmit2(ev) {
-        var _this = this;
-        this.$refs.ruleForm2.validate((valid) => {
-          if (valid) {
-            //_this.$router.replace('/table');
-            this.logining = true;
-            NProgress.start();
-            var loginParams = { username: this.ruleForm2.account, password: this.ruleForm2.checkPass };
-            requestLogin(loginParams).then(data => {
-              this.logining = false;
-              NProgress.done();
-              let { msg, code, user } = data;
-              if (code !== 200) {
-                this.$notify({
-                  title: '错误',
-                  message: msg,
-                  type: 'error'
-                });
-              } else {
-                sessionStorage.setItem('user', JSON.stringify(user));
-                this.$router.push({ path: '/table' });
-              }
-            });
-          } else {
-            console.log('error submit!!');
-            return false;
-          }
-        });
+    export default {
+      data() {
+        return {
+          tableData: [{
+            name: '食客手机app',
+            address: '食客点餐时使用的app'
+          }, {
+            name: '餐厅申请后台',
+            address: '上餐厅入住平台是需要向平台申请，审核通过后才可登录餐厅后台'
+          }, {
+            name: '餐厅后台',
+            address: '审核通过的餐厅登录的餐厅后台'
+          }, {
+            name: '供应商申请后台',
+            address: '供应商入住平台是需要向平台进行申请，申请通过后才可登录供应商后台'
+          }, {
+            name: '供应商后台',
+            address: '审核通过的供应商登录的供应商后台'
+          }, {
+            name: '云客服平台后台',
+            address: '客服专员登录的后台'
+          }, {
+            name: '平台后台',
+            address: '平台方所使用的后台主要是管理商户，供应商，客服专员'
+          }]
+        }
       }
     }
-  }
-
-</script>
+  </script>
 
 <style lang="scss" scoped>
   .login-container {
     /*box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);*/
+    position: absolute;
+    top: 10px;
+    left:10px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
     -moz-border-radius: 5px;
     background-clip: padding-box;
-    margin-bottom: 20px;
     background-color: #F9FAFC;
-    margin: 180px auto;
-    border: 2px solid #8492A6;
-    width: 350px;
-    padding: 35px 35px 15px 35px;
+    border: 1px solid #8492A6;
+    width: 500px;
+    padding: 10px 10px 10px 10px;
     .title {
-      margin: 0px auto 40px auto;
-      text-align: center;
-      color: #505458;
+      font-size:18px;
+      text-align:center;
     }
-    .remember {
-      margin: 0px 0px 35px 0px;
+    .box {
+      float:left;
+      border:1px solid #b1b1b1;
+      border-radius:5px;
+      margin:10px;
+      padding:10px;
+      width:200px;
+      height:100px;
+       -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, .05);
+        -moz-box-shadow: 0 2px 12px rgba(0, 0, 0, .05);
+        box-shadow: 0 2px 12px rgba(0, 0, 0, .05);
+        transition: box-shadow .3s;
+      .btn {
+        margin-top:10px;
+        margin-bottom:10px;
+        width:150px;
+      }
+      .tip{
+        font-size:12px;
+        color:#666666;
+      }
+    }
+    .box:hover {
+      -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, .2);
+      -moz-box-shadow: 0 2px 12px rgba(0, 0, 0, .2);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, .2);
     }
   }
 </style>

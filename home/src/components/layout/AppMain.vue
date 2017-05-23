@@ -38,13 +38,13 @@ import Sidebar from './Sidebar'
 		bottom: 0px;
 		width: 100%;
 		.main {
-			background: #324057;
+			// background: #324057;
 			position: absolute;
 			top: 60px;
 			bottom: 0px;
 			overflow: hidden;
 			.content-container {
-				background: #f1f2f7;
+				// background: #f1f2f7;
 				position: absolute;
 				right: 0px;
 				top: 0px;
