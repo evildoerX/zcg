@@ -41,7 +41,7 @@
 		border-right: 1px solid #dfe6ec;
 		.img {
 			margin-bottom: 10px;
-			border-bottom: 1px solid #dfe6ec;
+			border: 1px solid #dfe6ec;
 		}
 	}
 	

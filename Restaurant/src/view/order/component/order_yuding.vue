@@ -95,7 +95,7 @@
 			position:relative;
 			.img {
 				margin-bottom: 10px;
-				border-bottom: 1px solid #dfe6ec;
+				border: 1px solid #dfe6ec;
 			}
 			.tip{
 				position: absolute;
