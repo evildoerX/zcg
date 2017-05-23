@@ -22,10 +22,10 @@
 		  	<el-form-item label="配送状态">
 		    	<el-radio-group v-model="form.resource2">
 		      		<el-radio label="全部"></el-radio>
-		      		<el-radio label="待骑手接单"></el-radio>
-		      		<el-radio label="待骑手取货"></el-radio>
-		      		<el-radio label="骑手已取货"></el-radio>
-		      		<el-radio label="骑手已送达"></el-radio>
+		      		<el-radio label="待物流接单"></el-radio>
+		      		<el-radio label="待物流取货"></el-radio>
+		      		<el-radio label="物流已取货"></el-radio>
+		      		<el-radio label="物流已送达"></el-radio>
 		      		<el-radio label="配送已取消"></el-radio>
 		    	</el-radio-group>
 		  	</el-form-item>
@@ -43,22 +43,22 @@
 		</div>
 		<div class="item-list">
 			<img class="img" src="../../../assets/order/2.jpg" alt="">
-			<el-tag class="tip" type="primary">待骑手接单</el-tag>
+			<el-tag class="tip" type="primary">待物流接单</el-tag>
 			<el-button type="primary" class="order_btn">自主派送</el-button>
 		</div>
 		<div class="item-list">
 			<img class="img" src="../../../assets/order/3.jpg" alt="">
-			<el-tag class="tip" type="primary">待骑手取货</el-tag>
-			<el-button type="primary" class="order_btn">骑手已取货</el-button>
+			<el-tag class="tip" type="primary">待物流取货</el-tag>
+			<el-button type="primary" class="order_btn">物流已取货</el-button>
 		</div>
 		<div class="item-list">
 			<img class="img" src="../../../assets/order/4.jpg" alt="">
-			<el-tag class="tip" type="primary">骑手派送中</el-tag>
-			<el-button type="primary" class="order_btn">联系骑手</el-button>
+			<el-tag class="tip" type="primary">物流派送中</el-tag>
+			<el-button type="primary" class="order_btn">联系物流</el-button>
 		</div>
 		<div class="item-list">
 			<img class="img" src="../../../assets/order/5.jpg" alt="">
-			<el-tag class="tip" type="primary">骑手已送达,等待用户评价</el-tag>
+			<el-tag class="tip" type="primary">物流已送达,等待用户评价</el-tag>
 			<el-button class="order_btn">打印订单</el-button>
 		</div>
 	</div>

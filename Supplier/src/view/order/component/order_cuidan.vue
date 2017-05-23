@@ -3,7 +3,7 @@
 		<el-collapse v-model="activeNames" @change="handleChange" class="order_list" >
 			<el-collapse-item title="8 【预】5月24日 12：35 送达" name="1" class="order_item">
 				<div class="tip">
-			   	<el-tag type="danger">催单：顾客催单</el-tag>
+			   	<el-tag type="danger">催单：商户催单</el-tag>
 			    </div>
 			    <div class="user_info">
 			    	<img src="../../../assets/order/order_user.jpg" alt="">
@@ -20,7 +20,7 @@
 			    </div>
 			    <div class="order_footer">
 			    	<img src="../../../assets/order/order_footer.jpg"  alt="">
-			    	<el-button type="warning" class="order_btn">立即督促骑手</el-button>
+			    	<el-button type="warning" class="order_btn">立即督促物流</el-button>
 			    </div>
 			</el-collapse-item>
 		</el-collapse>

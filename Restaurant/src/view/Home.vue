@@ -2,7 +2,7 @@
 	<div>
 		<el-row>
 		  <el-col :span="24">
-			<img src="../assets/home/1.jpg"  alt="">
+			<img @click="gotoorder" style="cursor:pointer;"  src="../assets/home/1.jpg"  alt="">
 		  </el-col>
 		</el-row>
 		<el-row>
@@ -25,6 +25,20 @@
 
 <script>
 	export default {
+		data() {
+			return {
+			}
+		},
+		methods: {
+			//退出登录
+			gotoorder () {
+				this.$router.push('/order');
+			
+			}
+		},
+		mounted() {
+			
+		}
 	}
 
 </script>

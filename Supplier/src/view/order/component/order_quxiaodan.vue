@@ -42,12 +42,12 @@
 			    </div>
 			    <div class="order_footer">
 			    	<img src="../../../assets/order/order_footer.jpg"  alt="">
-			    	<el-button type="success" class="order_btn">骑手接单</el-button>
+			    	<el-button type="success" class="order_btn">物流接单</el-button>
 			    </div>
 			</el-collapse-item>
 			<el-collapse-item title="6 【预】5月23日 12：15 送达" name="3" class="order_item">
 				<div class="tip">
-			   	<el-tag type="warning">待骑手接单</el-tag>
+			   	<el-tag type="warning">待物流接单</el-tag>
 			    </div>
 			    <div class="user_info">
 			    	<img src="../../../assets/order/order_user.jpg" alt="">
@@ -64,12 +64,12 @@
 			    </div>
 			    <div class="order_footer">
 			    	<img src="../../../assets/order/order_footer.jpg"  alt="">
-			    	<el-button type="warning" class="order_btn">待骑手取货</el-button>
+			    	<el-button type="warning" class="order_btn">待物流取货</el-button>
 			    </div>
 			</el-collapse-item>
 			<el-collapse-item title="5【预】5月23日 12：15 送达" name="4" class="order_item">
 		    	<div class="tip">
-			   	<el-tag type="warning">待骑手取货</el-tag>
+			   	<el-tag type="warning">待物流取货</el-tag>
 			    </div>
 			    <div class="user_info">
 			    	<img src="../../../assets/order/order_user.jpg" alt="">
@@ -86,7 +86,7 @@
 			    </div>
 			    <div class="order_footer">
 			    	<img src="../../../assets/order/order_footer.jpg"  alt="">
-			    	<el-button type="warning" class="order_btn">骑手派送中</el-button>
+			    	<el-button type="warning" class="order_btn">物流派送中</el-button>
 			    </div>
 			</el-collapse-item>
 			<el-collapse-item title="4 【预】5月23日 11：45 送达" name="5" class="order_item">

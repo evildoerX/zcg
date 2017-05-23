@@ -1,8 +1,8 @@
 <template>
   <div class="login-container">
     <div class="pt_title">
-      <span class="name">外卖商家版</span>
-      <span class="tip">为您量身定制的餐饮管理左右手</span>
+      <span class="name">北美中餐馆供应商版</span>
+      <span class="tip">专业连接北美中餐馆供应商平台</span>
     </div>
     <div class="login_panel">
       <div class="pic">

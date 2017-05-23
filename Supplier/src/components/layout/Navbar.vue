@@ -1,8 +1,8 @@
 <template>
 	<div class="header">
 		<div class="logo">
-			商家中心|
-			<span style="color:#fff;font-size:16px;">腊汁肉夹馍 </span>
+			供应商中心|
+			<span style="color:#fff;font-size:16px;">生鲜专供</span>
 		</div>
 		<div class="userinfo">
 			<div class="item_info">
