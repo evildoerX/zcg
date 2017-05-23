@@ -3,6 +3,10 @@ import NotFound from '../components/404.vue'
 import AppMain from '../components/layout/AppMain.vue'
 import Home from '../view/Home.vue'
 import Data from '../view/data/Data.vue'
+import gkfx from '../view/data/gkfx.vue'
+import pjts from '../view/data/pjts.vue'
+import pmll from '../view/data/pmll.vue'
+import spfx from '../view/data/spfx.vue'
 import Finance from '../view/finance/Finance.vue'
 import Billrecord from '../view/finance/Bill_record.vue'
 import Help from '../view/help/Help.vue'
@@ -100,10 +104,10 @@ let routes = [
         iconCls: 'fa fa-address-card',
         children: [
             { path: '/data', component: Data, name: '营业统计', hidden: false },
-            { path: '/data', component: Data, name: '排名流量', hidden: false },
-            { path: '/data', component: Data, name: '商品分析', hidden: false },
-            { path: '/data', component: Data, name: '评价投诉', hidden: false },
-            { path: '/data', component: Data, name: '顾客分析', hidden: false }
+            { path: '/pmll', component: pmll, name: '排名流量', hidden: false },
+            { path: '/gkfx', component: gkfx, name: '顾客分析', hidden: false },
+            { path: '/pjts', component: pjts, name: '评价投诉', hidden: false },
+            { path: '/spfx', component: spfx, name: '商品分析', hidden: false }
         ]
     },
     {
