@@ -96,41 +96,45 @@ let routes = [
     {
         path: '/',
         component: AppMain,
-        name: '',
+        name: '数据',
         iconCls: 'fa fa-address-card',
-        leaf: true,//只有一个节点
         children: [
-            { path: '/data', component: Data, name: '数据' }
+            { path: '/data', component: Data, name: '营业统计', hidden: false },
+            { path: '/data', component: Data, name: '排名流量', hidden: false },
+            { path: '/data', component: Data, name: '商品分析', hidden: false },
+            { path: '/data', component: Data, name: '评价投诉', hidden: false },
+            { path: '/data', component: Data, name: '顾客分析', hidden: false }
         ]
     },
     {
         path: '/',
         component: AppMain,
-        name: '',
+        name: '营销',
         iconCls: 'fa fa-address-card',
-        leaf: true,//只有一个节点
         children: [
-            { path: '/sell', component: Sell, name: '营销', hidden: false }
+            { path: '/sell', component: Sell, name: '平台活动', hidden: false },
+            { path: '/sell', component: Sell, name: '自建活动', hidden: false }
         ]
     },
     {
         path: '/',
         component: AppMain,
-        name: '',
+        name: '店铺推广',
         iconCls: 'fa fa-address-card',
         leaf: true,//只有一个节点
         children: [
-            { path: '/spread', component: Spread, name: '店铺推广', hidden: false }
+            { path: '/spread', component: Spread, name: '竞价推广', hidden: false },
+            { path: '/spread', component: Spread, name: '推广资金', hidden: false }
         ]
     },
     {
         path: '/',
         component: AppMain,
-        name: '',
+        name: '帮助',
         iconCls: 'fa fa-address-card',
-        leaf: true,//只有一个节点
         children: [
-            { path: '/help', component: Help, name: '帮助', hidden: false }
+            { path: '/help', component: Help, name: '消息', hidden: false },
+            { path: '/help', component: Help, name: '投诉和反馈', hidden: false }
         ]
     },
     {

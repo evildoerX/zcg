@@ -43,7 +43,7 @@
 	top: 60px;
 	left: 0;
 	bottom: 0;
-	width: 150px;
+	width: 200px;
 	min-width: 45px;
 	max-height: 100vh;
 	height: calc(100% - 50px);

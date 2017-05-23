@@ -49,7 +49,7 @@ import Sidebar from './Sidebar'
 				right: 0px;
 				top: 0px;
 				bottom: 0px;
-				left: 150px;
+				left: 200px;
 				overflow-y: scroll;
 				padding: 20px;
 				.content-wrapper {
