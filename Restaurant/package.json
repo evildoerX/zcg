@@ -12,6 +12,7 @@
     "test": "npm run unit && npm run e2e"
   },
   "dependencies": {
+    "awe-dnd": "^0.3.0",
     "axios": "^0.15.3",
     "echarts": "^3.4.0",
     "element-ui": "^1.2.3",

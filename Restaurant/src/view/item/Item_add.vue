@@ -1,7 +1,7 @@
 <template>
 	<div>
     <div class="title">
-       <span class="t1">编辑商品</span>
+       <span class="t1">添加菜品</span>
        <el-button class="btn1" type="text" @click="gotoitem"><<返回</el-button>
     </div>
     <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
@@ -63,13 +63,13 @@
         dialogImageUrl: '',
         dialogVisible: false,
         ruleForm: {
-          name: '番茄仔鸡汤面',
-          checkList: ['招牌'],
-          region: '西安风味',
+          name: '',
+          checkList: [''],
+          region: '',
           price:'',
           delivery: false,
           type: [],
-          resource: '全时段售卖',
+          resource: '',
           desc: ''
         },
         rules: {

@@ -6,6 +6,8 @@ import Data from '../view/data/Data.vue'
 import Finance from '../view/finance/Finance.vue'
 import Help from '../view/help/Help.vue'
 import Item from '../view/item/Item.vue'
+import Itemedit from '../view/item/Item_edit.vue'
+import Itemadd from '../view/item/Item_add.vue'
 import Order from '../view/order/Order.vue'
 import Ordercheck from '../view/order/Order-check.vue'
 import Sell from '../view/sell/Sell.vue'
@@ -53,7 +55,9 @@ let routes = [
         iconCls: 'fa fa-address-card',
         leaf: true,//只有一个节点
         children: [
-            { path: '/item', component: Item, name: '商品', hidden: false }
+            { path: '/item', component: Item, name: '商品', hidden: false },
+            { path: '/itemedit', component: Itemedit, name: '商品编辑', hidden: true },
+            { path: '/itemadd', component: Itemadd, name: '商品添加', hidden: true }
         ]
     },
     {
