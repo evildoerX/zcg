@@ -11,7 +11,7 @@
               <el-button type="success" size="small" @click="man1">置满</el-button>
               <el-button size="small" @click="qing1">沽清</el-button>
             </el-button-group>
-            <el-button class="btn2" type="primary" size="small">编辑</el-button>
+            <el-button class="btn2" type="primary" size="small" @click="edititem">编辑</el-button>
           </div>
       </div>
     </div>
@@ -26,7 +26,7 @@
               <el-button type="success" size="small" @click="man2">置满</el-button>
               <el-button size="small" @click="qing2">沽清</el-button>
             </el-button-group>
-            <el-button class="btn2" type="primary" size="small">编辑</el-button>
+            <el-button class="btn2" type="primary" size="small" @click="edititem">编辑</el-button>
           </div>
       </div>
     </div>
@@ -41,7 +41,7 @@
               <el-button type="success" size="small" @click="man3">置满</el-button>
               <el-button size="small" @click="qing3">沽清</el-button>
             </el-button-group>
-            <el-button class="btn2" type="primary" size="small">编辑</el-button>
+            <el-button class="btn2" type="primary" size="small" @click="edititem">编辑</el-button>
           </div>
       </div>
     </div>
@@ -56,7 +56,7 @@
               <el-button type="success" size="small" @click="man4">置满</el-button>
               <el-button size="small" @click="qing4">沽清</el-button>
             </el-button-group>
-            <el-button class="btn2" type="primary" size="small">编辑</el-button>
+            <el-button class="btn2" type="primary" size="small" @click="edititem">编辑</el-button>
           </div>
       </div>
     </div>
@@ -76,6 +76,9 @@
       };
     },
     methods: {
+      edititem(){
+        this.$router.push('/itemedit');
+      },
       man1() {
         this.n1=10000;
       },

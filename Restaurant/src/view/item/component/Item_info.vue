@@ -3,9 +3,9 @@
     <el-row :gutter="10" class="item">
       <el-col :span="3" >
         <el-menu default-active="1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" >
-          <el-menu-item index="1">一品奶茶</el-menu-item>
-          <el-menu-item index="2">木夕奶茶</el-menu-item>
-          <el-menu-item index="3">咖啡奶茶</el-menu-item>
+          <el-menu-item index="1">汤面</el-menu-item>
+          <el-menu-item index="2">西安风味</el-menu-item>
+          <el-menu-item index="3">腊汁肉夹馍</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="21">
