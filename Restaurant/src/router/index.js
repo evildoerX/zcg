@@ -10,13 +10,16 @@ import spfx from '../view/data/spfx.vue'
 import Finance from '../view/finance/Finance.vue'
 import Billrecord from '../view/finance/Bill_record.vue'
 import Help from '../view/help/Help.vue'
+import tousu from '../view/help/tousu.vue'
 import Item from '../view/item/Item.vue'
 import Itemedit from '../view/item/Item_edit.vue'
 import Itemadd from '../view/item/Item_add.vue'
 import Order from '../view/order/Order.vue'
 import Ordercheck from '../view/order/Order-check.vue'
 import Sell from '../view/sell/Sell.vue'
+import zjhd from '../view/sell/zjhd.vue'
 import Spread from '../view/spread/Spread.vue'
+import Spreadmonsy from '../view/spread/Spreadmonsy.vue'
 import Store from '../view/store/Store.vue'
 import Setting from '../view/store/Setting.vue'
 import Peisong from '../view/store/Peisong.vue'
@@ -117,7 +120,7 @@ let routes = [
         iconCls: 'fa fa-address-card',
         children: [
             { path: '/sell', component: Sell, name: '平台活动', hidden: false },
-            { path: '/sell', component: Sell, name: '自建活动', hidden: false }
+            { path: '/zjhd', component: zjhd, name: '自建活动', hidden: false }
         ]
     },
     {
@@ -125,10 +128,9 @@ let routes = [
         component: AppMain,
         name: '店铺推广',
         iconCls: 'fa fa-address-card',
-        leaf: true,//只有一个节点
         children: [
-            { path: '/spread', component: Spread, name: '竞价推广', hidden: false },
-            { path: '/spread', component: Spread, name: '推广资金', hidden: false }
+            { path: '/spread', component: Spread, name: '竞价推广', hidden: false }
+            // { path: '/spreadmonsy', component: Spreadmonsy, name: '推广资金', hidden: false }
         ]
     },
     {
@@ -138,7 +140,7 @@ let routes = [
         iconCls: 'fa fa-address-card',
         children: [
             { path: '/help', component: Help, name: '消息', hidden: false },
-            { path: '/help', component: Help, name: '投诉和反馈', hidden: false }
+            { path: '/tousu', component: tousu, name: '投诉和反馈', hidden: false }
         ]
     },
     {
