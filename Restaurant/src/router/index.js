@@ -63,11 +63,10 @@ let routes = [
     {
         path: '/',
         component: AppMain,
-        name: '',
+        name: '顾客',
         iconCls: 'fa fa-address-card',
-        leaf: true,//只有一个节点
         children: [
-            { path: '/user', component: User, name: '顾客', hidden: false }
+            { path: '/user', component: User, name: '顾客评价', hidden: false }
         ]
     },
     {
