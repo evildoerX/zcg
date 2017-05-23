@@ -4,6 +4,7 @@ import AppMain from '../components/layout/AppMain.vue'
 import Home from '../view/Home.vue'
 import Data from '../view/data/Data.vue'
 import Finance from '../view/finance/Finance.vue'
+import Billrecord from '../view/finance/Bill_record.vue'
 import Help from '../view/help/Help.vue'
 import Item from '../view/item/Item.vue'
 import Itemedit from '../view/item/Item_edit.vue'
@@ -13,6 +14,8 @@ import Ordercheck from '../view/order/Order-check.vue'
 import Sell from '../view/sell/Sell.vue'
 import Spread from '../view/spread/Spread.vue'
 import Store from '../view/store/Store.vue'
+import Setting from '../view/store/Setting.vue'
+import Peisong from '../view/store/Peisong.vue'
 import User from '../view/user/User.vue'
 
 let routes = [
@@ -72,21 +75,22 @@ let routes = [
     {
         path: '/',
         component: AppMain,
-        name: '',
+        name: '财务',
         iconCls: 'fa fa-address-card',
-        leaf: true,//只有一个节点
         children: [
-            { path: '/finance', component: Finance, name: '财务', hidden: false }
+            { path: '/finance', component: Finance, name: '资金管理', hidden: false },
+            { path: '/billrecord', component: Billrecord, name: '账单记录', hidden: false }
         ]
     },
     {
         path: '/',
         component: AppMain,
-        name: '',
+        name: '门店',
         iconCls: 'fa fa-address-card',
-        leaf: true,//只有一个节点
         children: [
-            { path: '/store', component: Store, name: '门店', hidden: false }
+            { path: '/store', component: Store, name: '门店信息', hidden: false },
+            { path: '/peisong', component: Peisong, name: '配送管理', hidden: false },
+            { path: '/setting', component: Setting, name: '设置', hidden: false }
         ]
     },
     {

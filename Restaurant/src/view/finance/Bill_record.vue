@@ -1,10 +1,7 @@
 <template>
 	<div>
 		<div class="zongping">
-			<img src="../../assets/Bell/1.jpg" alt="">
-		</div>
-		<div class="info">
-			<img src="../../assets/Bell/2.jpg" alt="">
+			<img src="../../assets/Bell/3.jpg" alt="">
 		</div>
 	</div>
 </template>

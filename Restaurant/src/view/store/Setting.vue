@@ -1,10 +1,10 @@
 <template>
-	<div>
+	<div class="store">
 		<div class="zongping">
-			<img src="../../assets/Bell/1.jpg" alt="">
+			<img src="../../assets/setting/1.jpg" alt="">
 		</div>
 		<div class="info">
-			<img src="../../assets/Bell/2.jpg" alt="">
+			<img src="../../assets/setting/2.jpg" alt="">
 		</div>
 	</div>
 </template>
@@ -35,12 +35,17 @@
 </script>
 
 <style scoped lang="scss">
-.zongping{
-  border-bottom: 20px solid #f1f2f7;
+.store{
+	// width: 1000px;
+	// margin: 0 auto;
+	.zongping{
+	  border-bottom: 20px solid #f1f2f7;
+	}
+	.data{
+	border-bottom: 20px solid #f1f2f7;
+	}
+	.info{
+	}
 }
-.data{
-border-bottom: 20px solid #f1f2f7;
-}
-.info{
-}
+
 </style>
