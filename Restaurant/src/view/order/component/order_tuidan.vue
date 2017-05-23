@@ -23,28 +23,6 @@
 			    	<el-button type="warning" class="order_btn">同意退单</el-button>
 			    </div>
 			</el-collapse-item>
-			<el-collapse-item title="7 【预】5月24日 12：25 送达" name="2" class="order_item">
-				<div class="tip">
-			   	<el-tag type="danger">退单：配送时间太长</el-tag>
-			    </div>
-			    <div class="user_info">
-			    	<img src="../../../assets/order/order_user.jpg" alt="">
-			    </div>
-			    <div class="order_stat">
-			    	<img src="../../../assets/order/order_stat.jpg"  alt="">
-			    </div>
-			    <div class="order_item">
-			    	<img src="../../../assets/order/order_item.jpg"  alt="">
-			    </div>
-			    <div class="order_totle">
-			    	<span class="title">本单实收总金额：</span>
-			    	<span class="money">[已支付]￥ <em>15 元</em></span>
-			    </div>
-			    <div class="order_footer">
-			    	<img src="../../../assets/order/order_footer.jpg"  alt="">
-			    	<el-button  class="order_btn">已退单</el-button>
-			    </div>
-			</el-collapse-item>
 		</el-collapse>
 	</div>
 </template>
