@@ -1,4 +1,4 @@
-// see http://vuejs-templates.github.io/webpack for documentation.
+ // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path')
 
 module.exports = {
@@ -9,7 +9,7 @@ module.exports = {
         index: path.resolve(__dirname, '../elm/index.html'),
         assetsRoot: path.resolve(__dirname, '../elm'),
         assetsSubDirectory: 'static',
-        assetsPublicPath: '/elm/',
+        assetsPublicPath: './',
         productionSourceMap: true,
         // Surge or Netlify already gzip all static assets for you.
         // Before setting to `true`, make sure to:
