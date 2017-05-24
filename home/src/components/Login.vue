@@ -4,9 +4,20 @@
         <div class="title">
           点击可以查看对应原型
         </div>
-        <a href="./../../DinerApp/elm/" class="box" style="width:540px; height:120px;">
+        <a href="#" class="box" style="width:540px; height:120px;">
           <div  class="btn">食客手机app</div>
           <div class="tip">食客点餐时使用的app</div>
+          <div class="erweima">
+            <img src="../assets/1.png" width="120" alt="">
+          </div>
+          <div class="saoma">
+            <div class="cn">
+              扫码预览
+            </div>
+            <div class="en">
+              Sweep code preview
+            </div>
+          </div>
         </a>
         <a :href="item.link" class="box" v-for="item in tableData">
           <div  class="btn">{{item.name}}</div>
@@ -98,6 +109,7 @@ import hello from './Hello.vue'
     }
     .box {
       float:left;
+      position:relative;
       border:1px solid #b1b1b1;
       border-radius:5px;
       margin:10px;
@@ -117,6 +129,22 @@ import hello from './Hello.vue'
       .tip{
         font-size:14px;
         color:#666666;
+      }
+      .erweima{
+        position:absolute;
+        right: 180px;
+        top: 10px;
+      }
+      .saoma{
+        position:absolute;
+        right: 10px;
+        top: 10px;
+        font-size:18px;
+        text-align:center;
+        .cn {
+          margin-top:30px;
+          margin-bottom:10px;
+        }
       }
     }
     .box:hover {

@@ -1,7 +1,7 @@
 <template>
   	<div>
         <head-top signin-up='home'>
-            <span slot='logo' class="head_logo"  @click="reload">ele.me</span>
+            <span slot='logo' class="head_logo"  @click="reload">中餐馆</span>
         </head-top>
         <nav class="city_nav">
             <div class="city_tip">

@@ -1,33 +1,6 @@
 <template>
   <div>
-  		<div class="title">
-          点击可以查看对应原型
-        </div>
-    	<div class="login-container">
-    		<div class="box" >
-        		餐馆总数：100000
-     		</div>
-     		<div class="box">
-        		供应商总数：100000
-     		</div>
-     		<div class="box">
-        		客服人员：100
-     		</div>
-    	</div>
-    	<div class="login-container">
-    		<div class="box" >
-        		今日餐馆订单数：9000000
-     		</div>
-     		<div class="box">
-        		今日供应商订单数：900000
-     		</div>
-     		<div class="box">
-        		今日餐馆总收入：90000000
-     		</div>
-     		<div class="box">
-        		今日供应商总收入：90000000
-     		</div>
-    	</div>
+  		<img src="../assets/1.jpg" alt="">
   </div>
 </template>
 
