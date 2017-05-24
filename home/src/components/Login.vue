@@ -28,7 +28,7 @@ import hello from './Hello.vue'
           tableData: [{
             name: '食客手机app',
             address: '食客点餐时使用的app',
-            link:'https://www.baidu.com'
+            link:'../../Restaurant/webroot/'
           }, {
             name: '餐厅申请后台',
             address: '上餐厅入住平台是需要向平台申请，审核通过后才可登录餐厅后台',
