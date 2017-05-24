@@ -15,7 +15,7 @@
               扫码预览
             </div>
             <div class="en">
-              Sweep code preview
+              scan QR CODE
             </div>
           </div>
         </a>
@@ -132,7 +132,7 @@ import hello from './Hello.vue'
       }
       .erweima{
         position:absolute;
-        right: 180px;
+        right: 150px;
         top: 10px;
       }
       .saoma{
