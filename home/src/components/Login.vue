@@ -11,7 +11,7 @@
         </a>
       </div>
       <div class="pic">
-        <iframe src="http://www.processon.com/view/link/5924628be4b0bb04c34cbef6" width="800" height="620"></iframe> 
+        <iframe src="http://www.processon.com/view/link/5924628be4b0bb04c34cbef6" width="1200" height="768"></iframe> 
       </div>
   </div>
 </template>
@@ -28,7 +28,7 @@ import hello from './Hello.vue'
           tableData: [{
             name: '食客手机app',
             address: '食客点餐时使用的app',
-            link:'../../Restaurant/webroot/'
+            link:'../../DinerApp/elm/'
           }, {
             name: '餐厅申请后台',
             address: '上餐厅入住平台是需要向平台申请，审核通过后才可登录餐厅后台',
@@ -72,15 +72,14 @@ import hello from './Hello.vue'
      
     } 
   .pic {
-    position:absolute;
-    top:10px;
-    left:550px;
+    margin-top: 30px;
+    text-align:center;
   }
   .login-container {
     /*box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);*/
-    position: absolute;
-    top: 10px;
-    left:10px;
+    // position: absolute;
+    margin: 0 auto;
+    margin-top: 10px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
     -moz-border-radius: 5px;
@@ -88,6 +87,7 @@ import hello from './Hello.vue'
     background-color: #F9FAFC;
     border: 1px solid #8492A6;
     width: 500px;
+    height: 600px;
     padding: 10px 10px 10px 10px;
     cursor:pointer;
     .title {
