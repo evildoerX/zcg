@@ -4,7 +4,7 @@
         <div class="title">
           点击可以查看对应原型
         </div>
-        <a href="./../DinerApp/elm/" class="box" style="width:540px; height:120px;">
+        <a href="./../../DinerApp/elm/" class="box" style="width:540px; height:120px;">
           <div  class="btn">食客手机app</div>
           <div class="tip">食客点餐时使用的app</div>
         </a>
@@ -47,7 +47,7 @@ import hello from './Hello.vue'
           }, {
             name: '云客服平台后台',
             address: '客服专员登录的后台',
-            link:'../../Restaurant/webroot/'
+            link:'https://pro.modao.cc/app/c2ff5c984845f50dacf530247bcf7177360f2006'
           }, {
             name: '平台后台',
             address: '平台方所使用的后台主要是管理商户，供应商，客服专员',
