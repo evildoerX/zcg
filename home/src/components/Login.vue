@@ -32,22 +32,27 @@ import hello from './Hello.vue'
           }, {
             name: '餐厅申请后台',
             address: '上餐厅入住平台是需要向平台申请，审核通过后才可登录餐厅后台',
-            link:'../RestaurantApply/RestaurantApply'
+            link:'../../RestaurantApply/webroot/'
           }, {
             name: '餐厅后台',
-            address: '审核通过的餐厅登录的餐厅后台'
+            address: '审核通过的餐厅登录的餐厅后台',
+            link:'../../Restaurant/webroot/'
           }, {
             name: '供应商申请后台',
-            address: '供应商入住平台是需要向平台进行申请，申请通过后才可登录供应商后台'
+            address: '供应商入住平台是需要向平台进行申请，申请通过后才可登录供应商后台',
+            link:'../../SupplierApply/webroot/'
           }, {
             name: '供应商后台',
-            address: '审核通过的供应商登录的供应商后台'
+            address: '审核通过的供应商登录的供应商后台',
+            link:'../../Supplier/webroot/'
           }, {
             name: '云客服平台后台',
-            address: '客服专员登录的后台'
+            address: '客服专员登录的后台',
+            link:'../../Restaurant/webroot/'
           }, {
             name: '平台后台',
-            address: '平台方所使用的后台主要是管理商户，供应商，客服专员'
+            address: '平台方所使用的后台主要是管理商户，供应商，客服专员',
+            link:'../../Platform/webroot/'
           }]
         }
       }
