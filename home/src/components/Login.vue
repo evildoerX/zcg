@@ -4,10 +4,11 @@
         <div class="title">
           点击可以查看对应原型
         </div>
-        <div class="box" v-for="item in tableData">
+
+        <a :href="item.link" class="box" v-for="item in tableData">
           <div  class="btn">{{item.name}}</div>
           <div class="tip">{{item.address}}</div>
-        </div>
+        </a>
       </div>
       <div class="pic">
         <iframe src="http://www.processon.com/view/link/5924628be4b0bb04c34cbef6" width="800" height="620"></iframe> 
@@ -26,10 +27,12 @@ import hello from './Hello.vue'
           app_pane:false,
           tableData: [{
             name: '食客手机app',
-            address: '食客点餐时使用的app'
+            address: '食客点餐时使用的app',
+            link:'https://www.baidu.com'
           }, {
             name: '餐厅申请后台',
-            address: '上餐厅入住平台是需要向平台申请，审核通过后才可登录餐厅后台'
+            address: '上餐厅入住平台是需要向平台申请，审核通过后才可登录餐厅后台',
+            link:'../RestaurantApply/RestaurantApply'
           }, {
             name: '餐厅后台',
             address: '审核通过的餐厅登录的餐厅后台'
@@ -52,6 +55,17 @@ import hello from './Hello.vue'
   </script>
 
 <style lang="scss" scoped>
+  a:link {   
+    color: #000000;   
+    text-decoration: none;   
+    }   
+    a:visited {   
+    color: #000000;   
+    text-decoration: none;   
+    }   
+    a:hover {   
+     
+    } 
   .pic {
     position:absolute;
     top:10px;
@@ -70,7 +84,7 @@ import hello from './Hello.vue'
     border: 1px solid #8492A6;
     width: 500px;
     padding: 10px 10px 10px 10px;
-
+    cursor:pointer;
     .title {
       font-size:18px;
       text-align:center;
