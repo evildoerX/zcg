@@ -6,7 +6,7 @@
     </div>
     <div class="login_panel">
       <div class="pic">
-        <img src="../assets/login_pic.jpg" alt="">
+        <img src="../assets/login_pic.jpg" width="500px;" alt="">
       </div>
       <div class="login">
         <el-form :model="ruleForm2" :rules="rules2" ref="ruleForm2" label-position="left" label-width="0px" class="demo-ruleForm ">
