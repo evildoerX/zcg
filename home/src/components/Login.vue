@@ -4,14 +4,17 @@
         <div class="title">
           点击可以查看对应原型
         </div>
-
+        <a href="./../DinerApp/elm/" class="box" style="width:540px; height:120px;">
+          <div  class="btn">食客手机app</div>
+          <div class="tip">食客点餐时使用的app</div>
+        </a>
         <a :href="item.link" class="box" v-for="item in tableData">
           <div  class="btn">{{item.name}}</div>
           <div class="tip">{{item.address}}</div>
         </a>
       </div>
       <div class="pic">
-        <iframe src="http://www.processon.com/view/link/5924628be4b0bb04c34cbef6" width="1200" height="768"></iframe> 
+        <iframe class="page" src="http://www.processon.com/view/link/5924628be4b0bb04c34cbef6" width="1200" height="768"></iframe> 
       </div>
   </div>
 </template>
@@ -26,10 +29,6 @@ import hello from './Hello.vue'
         return {
           app_pane:false,
           tableData: [{
-            name: '食客手机app',
-            address: '食客点餐时使用的app',
-            link:'../../DinerApp/elm/'
-          }, {
             name: '餐厅申请后台',
             address: '上餐厅入住平台是需要向平台申请，审核通过后才可登录餐厅后台',
             link:'../../RestaurantApply/webroot/'
@@ -72,8 +71,11 @@ import hello from './Hello.vue'
      
     } 
   .pic {
-    margin-top: 30px;
+    margin-top: 20px;
     text-align:center;
+    .page {
+      border: 1px solid #8492A6;
+    }
   }
   .login-container {
     /*box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);*/
@@ -86,8 +88,8 @@ import hello from './Hello.vue'
     background-clip: padding-box;
     background-color: #F9FAFC;
     border: 1px solid #8492A6;
-    width: 500px;
-    height: 600px;
+    width: 600px;
+    height: 670px;
     padding: 10px 10px 10px 10px;
     cursor:pointer;
     .title {
@@ -100,8 +102,8 @@ import hello from './Hello.vue'
       border-radius:5px;
       margin:10px;
       padding:10px;
-      width:200px;
-      height:100px;
+      width:250px;
+      height:120px;
        -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, .05);
         -moz-box-shadow: 0 2px 12px rgba(0, 0, 0, .05);
         box-shadow: 0 2px 12px rgba(0, 0, 0, .05);
@@ -110,9 +112,10 @@ import hello from './Hello.vue'
         margin-top:10px;
         margin-bottom:10px;
         width:150px;
+        font-size:18px;
       }
       .tip{
-        font-size:12px;
+        font-size:14px;
         color:#666666;
       }
     }
