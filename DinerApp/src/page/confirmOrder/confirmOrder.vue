@@ -43,7 +43,7 @@
                 </header>
                 <section class="hongbo">
                     <span>红包</span>
-                    <span>暂时只在饿了么 APP 中支持</span>
+                    <span>暂时只在中餐馆 APP 中支持</span>
                 </section>
             </section>
             <section class="food_list">
@@ -115,7 +115,6 @@
                 </div>
             </transition>
         </section>
-        <loading v-if="showLoading"></loading>
         <alert-tip v-if="showAlert" @closeTip="showAlert = false" :alertText="alertText"></alert-tip>
         <transition name="router-slid" mode="out-in">
             <router-view></router-view>
@@ -222,11 +221,7 @@
             async initAddress(){
                 if (this.userInfo && this.userInfo.user_id) {
                     let addressRes
-                    if (localapi || proapi) {
-                        addressRes = await getAddressList(this.userInfo.user_id);
-                    }else{
-                        addressRes = await getAddress(this.checkoutData.cart.id, this.checkoutData.sig);
-                    }
+                    addressRes = await getAddress(this.checkoutData.cart.id, this.checkoutData.sig);
                     if (addressRes instanceof Array && addressRes.length) {
                         this.CHOOSE_ADDRESS({address: addressRes[0], index: 0});
                     }

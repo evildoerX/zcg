@@ -44,7 +44,7 @@
             },
             gotoPay(){
                 this.showAlert = true;
-                this.alertText = '请前往 官方饿了么APP 支付';
+                this.alertText = '请前往 官方中餐馆APP 支付';
             }
         },
         computed: {

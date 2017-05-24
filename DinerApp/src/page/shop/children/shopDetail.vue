@@ -67,7 +67,7 @@
         </section>
         <transition name="fade">
             <section class="license_container" v-if="showlicenseImg" @click="showlicenseImg = false">
-                <img :src="localapi || proapi ? imgBaseUrl + licenseImg: getImgPath(licenseImg)">
+                <img :src="getImgPath(licenseImg)">
             </section>
         </transition>
         <transition name="router-slid" mode="out-in">

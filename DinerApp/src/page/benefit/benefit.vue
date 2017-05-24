@@ -75,7 +75,6 @@
             </transition>
         </section>
         <alert-tip v-if="showAlert" @closeTip="showAlert = false" :alertText="alertText"></alert-tip>
-        <loading v-show="showLoading"></loading>
         <transition name="router-slid" mode="out-in">
             <router-view></router-view>
         </transition>

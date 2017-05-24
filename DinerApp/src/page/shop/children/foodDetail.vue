@@ -2,7 +2,7 @@
 	<div class="rating_page">
         <head-top :head-title="name" go-back='true'></head-top>
         <section class="header_img">
-            <img :src="localapi || proapi ? imgBaseUrl + image_path: getImgPath(image_path)" class="food_img">
+            <img :src="getImgPath(image_path)" class="food_img">
             <div class="cover"></div>
             <p class="description">{{description}}</p>
         </section>

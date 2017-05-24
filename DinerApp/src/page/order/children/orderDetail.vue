@@ -4,7 +4,7 @@
         <section v-if="!showLoading" id="scroll_section" class="scroll_container">
             <section class="scroll_insert">
                 <section class="order_titel">
-                    <img :src="localapi || proapi ? imgBaseUrl + orderDetail.restaurant_image_url : orderDetail.restaurant_image_url">
+                    <img src="../../../images/idg/shop/1.png">
                     <p>{{orderDetail.status_bar.title}}</p>
                     <p>{{orderDetail.timeline_node.description}}</p>
                     <router-link class="order_again" :to="{path: '/shop', query: {geohash, id: orderDetail.restaurant_id}}">再来一单</router-link>
@@ -12,7 +12,7 @@
                 <section class="food_list">
                     <router-link class="food_list_header" :to="{path: '/shop', query: {geohash, id: orderDetail.restaurant_id}}">
                         <div class="shop_name">
-                            <img :src="localapi || proapi ? imgBaseUrl + orderDetail.restaurant_image_url : orderDetail.restaurant_image_url">
+                            <img src="../../../images/idg/shop/1.png">
                             <span>{{orderDetail.restaurant_name}}</span>
                         </div>
                         <svg fill="#333" class="arrow_right">
@@ -80,9 +80,6 @@
                 </section>
             </section>
         </section>
-        <transition name="loading">
-            <loading v-if="showLoading"></loading>
-        </transition>
     </div>
 </template>
 

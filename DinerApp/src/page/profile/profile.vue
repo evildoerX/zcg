@@ -61,7 +61,7 @@
                         </span>
                     </div>
                 </router-link>
-                <!-- 饿了么会员卡 -->
+                <!-- 中餐馆会员卡 -->
                 <router-link to='/vipcard' class="myorder">
                     <aside>
                         <svg fill="#ffc636">

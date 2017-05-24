@@ -33,9 +33,6 @@
             </li>
         </ul>
         <foot-guide></foot-guide>
-        <transition name="loading">
-            <loading v-show="showLoading"></loading>
-        </transition>
         <transition name="router-slid" mode="out-in">
             <router-view></router-view>
         </transition>

@@ -27,7 +27,6 @@
                 </li>
             </ul>
         </section>
-        <loading v-if="showLoading"></loading>
     </div>
 </template>
 

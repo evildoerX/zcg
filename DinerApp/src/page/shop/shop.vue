@@ -7,7 +7,7 @@
                 </svg>
             </nav>
             <header class="shop_detail_header" ref="shopheader" :style="{zIndex: showActivities? '14':'10'}">
-                <img :src="localapi || proapi ? imgBaseUrl + shopDetailData.image_path: getImgPath(shopDetailData.image_path)" class="header_cover_img">
+                <img :src="getImgPath(shopDetailData.image_path)" class="header_cover_img">
                 <section class="description_header">
                     <router-link to="/shop/shopDetail" class="description_top">
                         <section class="description_left">
@@ -98,7 +98,7 @@
                                     <section v-for="(foods,foodindex) in item.foods" :key="foodindex" class="menu_detail_list">
                                         <router-link  :to="{path: 'shop/foodDetail', query:{image_path:foods.image_path, description: foods.description, month_sales: foods.month_sales, name: foods.name, rating: foods.rating, rating_count: foods.rating_count, satisfy_rate: foods.satisfy_rate, foods, shopId}}" tag="div" class="menu_detail_link">
                                             <section class="menu_food_img">
-                                                <img :src="localapi || proapi ? imgBaseUrl + foods.image_path: getImgPath(foods.image_path)">
+                                                <img :src="getImgPath(foods.image_path)">
                                             </section>
                                             <section class="menu_food_description">
                                                 <h3 class="food_description_head">
@@ -229,7 +229,7 @@
                             </ul>
                             <ul class="rating_list_ul">
                                 <li v-for="(item, index) in ratingList" :key="index" class="rating_list_li">
-                                    <img :src="getImgPath(item.avatar)" class="user_avatar">
+                                    <img src="../../images/idg/avatar.jpg" class="user_avatar">
                                     <section class="rating_list_details">
                                         <header>
                                             <section class="username_star">
@@ -305,7 +305,6 @@
                 </svg>
             </span>
         </transition>
-       <loading v-show="showLoading || loadRatings"></loading>
        <transition name="router-slid" mode="out-in">
             <router-view></router-view>
         </transition>

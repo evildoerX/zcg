@@ -52,9 +52,6 @@
 			</svg>
 		</aside>
 		<div ref="abc" style="background-color: red;"></div>
-		<transition name="loading">
-			<loading v-show="showLoading"></loading>
-		</transition>
 	</div>
 </template>
 
